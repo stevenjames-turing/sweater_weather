@@ -50,5 +50,17 @@ RSpec.describe OpenweatherFacade do
         end
       end
     end
+
+    context '#current_weather(latitude, longitude)' do
+      before(:each) do 
+        @current = OpenweatherFacade.current_weather(38.6270, -90.1994)
+      end
+
+      it 'creates a CurrentWeather object' do 
+        expect(@current).to be_a CurrentWeather
+      end
+
+      
+    end
   end
 end
