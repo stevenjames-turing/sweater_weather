@@ -27,5 +27,17 @@ RSpec.describe OpenweatherFacade do
         end
       end
     end
+
+    context '#hourly_weather(latitude, longitude)' do
+      before(:each) do 
+        @hourly = OpenweatherFacade.hourly_weather(38.6270, -90.1994)
+      end
+
+      it 'creates array of HourlyWeather objects' do 
+        expect(@hourly).to be_an Array
+      end
+
+      
+    end
   end
 end
