@@ -11,6 +11,10 @@ RSpec.describe OpenweatherFacade do
         expect(@daily).to be_an Array
       end
 
+      it 'returns the next 5 days of daily weather data' do 
+        expect(@daily.count).to eq(5)
+      end
+
       it 'each object has expected attributes' do 
         @daily.each do |day_object|
           expect(day_object.date).to be_a String
