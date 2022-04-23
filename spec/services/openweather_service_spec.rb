@@ -39,6 +39,11 @@ RSpec.describe OpenweatherService do
 
         expect(@weather_data[:daily]).to be_an Array
       end
+
+      it 'current includes expected data' do 
+        expected_keys = [:dt, :sunrise, :sunset, :temp, :feels_like, :pressure, :humidity, :dew_point, :uvi, :clouds, :visibility, :wind_speed, :wind_deg, :wind_gust, :weather]
+        expect(@weather_data[:current].keys).to eq(expected_keys)
+      end
     end
   end
 end
