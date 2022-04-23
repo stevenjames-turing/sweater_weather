@@ -19,6 +19,26 @@ RSpec.describe OpenweatherService do
         expect(@weather_data.keys).to_not include('minutely')
         expect(@weather_data.keys).to_not include('alerts')
       end
+
+      it 'data is formatted as expected' do 
+        expect(@weather_data[:lat]).to be_a Float
+        expect(@weather_data[:lat]).to eq(38.6270)
+
+        expect(@weather_data[:lon]).to be_a Float
+        expect(@weather_data[:lon]).to eq(-90.1994)
+
+        expect(@weather_data[:timezone]).to be_a String
+        expect(@weather_data[:timezone]).to eq("America/Chicago")
+
+        expect(@weather_data[:timezone_offset]).to be_a Integer
+        expect(@weather_data[:timezone_offset]).to eq(-18000)
+        
+        expect(@weather_data[:current]).to be_a Hash
+
+        expect(@weather_data[:hourly]).to be_an Array
+
+        expect(@weather_data[:daily]).to be_an Array
+      end
     end
   end
 end
