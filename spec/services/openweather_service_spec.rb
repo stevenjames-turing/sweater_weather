@@ -44,6 +44,13 @@ RSpec.describe OpenweatherService do
         expected_keys = [:dt, :sunrise, :sunset, :temp, :feels_like, :pressure, :humidity, :dew_point, :uvi, :clouds, :visibility, :wind_speed, :wind_deg, :wind_gust, :weather]
         expect(@weather_data[:current].keys).to eq(expected_keys)
       end
+      
+      it 'hourly includes expected data' do 
+        expect(@weather_data[:hourly].count).to eq(48)
+
+        expected_keys = [:dt, :temp, :feels_like, :pressure, :humidity, :dew_point, :uvi, :clouds, :visibility, :wind_speed, :wind_deg, :wind_gust, :weather, :pop]
+        expect(@weather_data[:hourly][0].keys).to eq(expected_keys)
+      end
     end
   end
 end
