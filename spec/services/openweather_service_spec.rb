@@ -14,6 +14,11 @@ RSpec.describe OpenweatherService do
       it 'hash has expected data' do 
         expect(@weather_data.keys).to eq([:lat, :lon, :timezone, :timezone_offset, :current, :hourly, :daily])
       end
+      
+      it 'hash does NOT have unexpected data' do 
+        expect(@weather_data.keys).to_not include('minutely')
+        expect(@weather_data.keys).to_not include('alerts')
+      end
     end
   end
 end
