@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe OpenweatherFacade do
+RSpec.describe OpenweatherFacade, :vcr do
   context 'class methods' do 
     context '#daily_weather(latitude, longitude)' do
       before(:each) do 

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe OpenweatherService do
+RSpec.describe OpenweatherService, :vcr do
   context 'class methods' do 
     context '#all_weather(latitude, longitude)' do
       before(:each) do 
