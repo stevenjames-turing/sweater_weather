@@ -37,6 +37,10 @@ RSpec.describe OpenweatherFacade do
         expect(@hourly).to be_an Array
       end
 
+      it 'returns the next 8 hours weather data' do 
+        expect(@hourly.count).to eq(8)
+      end
+
       
     end
   end
