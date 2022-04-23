@@ -41,7 +41,14 @@ RSpec.describe OpenweatherFacade do
         expect(@hourly.count).to eq(8)
       end
 
-      
+      it 'each object has expected attributes' do 
+        @hourly.each do |hour_object|
+          expect(hour_object.time).to be_a String
+          expect(hour_object.temperature).to be_a Float
+          expect(hour_object.conditions).to be_a String
+          expect(hour_object.icon).to be_a String
+        end
+      end
     end
   end
 end
