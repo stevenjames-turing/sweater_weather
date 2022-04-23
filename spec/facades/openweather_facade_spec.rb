@@ -60,7 +60,18 @@ RSpec.describe OpenweatherFacade do
         expect(@current).to be_a CurrentWeather
       end
 
-      
+      it 'object has expected attributes' do 
+        expect(@current.datetime).to be_a Time
+        expect(@current.sunrise).to be_a Time
+        expect(@current.sunset).to be_a Time
+        expect(@current.temperature).to be_a Float
+        expect(@current.feels_like).to be_a Float
+        expect(@current.humidity).to be_an Integer
+        expect(@current.uvi).to be_a Float
+        expect(@current.visibility).to be_an Integer
+        expect(@current.conditions).to be_a String
+        expect(@current.icon).to be_a String
+      end
     end
   end
 end
