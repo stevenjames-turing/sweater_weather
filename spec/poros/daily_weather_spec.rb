@@ -50,5 +50,15 @@ RSpec.describe DailyWeather do
     expect(daily).to be_a DailyWeather
   end
   
+  it 'has all required attributes' do 
+    daily = DailyWeather.new(@weather_data)
   
+    expect(daily.date).to eq(Time.at(1650733200).strftime("%F"))
+    expect(daily.sunrise).to eq(Time.at(1650712400))
+    expect(daily.sunset).to eq(Time.at(1650761070))
+    expect(daily.max_temp).to eq(83.57)
+    expect(daily.min_temp).to eq(66.13)
+    expect(daily.conditions).to eq('few clouds')
+    expect(daily.icon).to eq('02d')
+  end
 end
