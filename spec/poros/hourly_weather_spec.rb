@@ -34,5 +34,12 @@ RSpec.describe HourlyWeather do
     expect(hourly).to be_a HourlyWeather
   end
   
+  it 'has all required attributes' do 
+    hourly = HourlyWeather.new(@weather_data)
   
+    expect(hourly.time).to eq(Time.at(1650736800).strftime("%H:%M:%S"))
+    expect(hourly.temperature).to eq(83.57)
+    expect(hourly.conditions).to eq('clear sky')
+    expect(hourly.icon).to eq('01d')
+  end
 end
