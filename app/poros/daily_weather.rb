@@ -1,5 +1,3 @@
-require './app/poros/concerns/date_formatter'
-
 class DailyWeather
   include DateFormatter
 
