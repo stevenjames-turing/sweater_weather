@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe MapquestService, :vcr do
   context 'class methods' do 
-    context '#get_city_lat_lon(city)' do
+    context '#get_city_coordinates(city)' do
       before(:each) do 
-        @response = MapquestService.get_city_lat_lon('St. Louis, MO')
+        @response = MapquestService.get_city_coordinates('St. Louis, MO')
         @location_data = @response[:results][0]
       end
 

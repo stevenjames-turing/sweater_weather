@@ -6,7 +6,7 @@ class MapquestService
     end
   end
 
-  def self.get_city_lat_lon(city)
+  def self.get_city_coordinates(city)
     response = conn.get('address') do |request|
       request.params['location'] = city
       request.params['outFormat'] = 'json'
