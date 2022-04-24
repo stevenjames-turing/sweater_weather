@@ -60,6 +60,14 @@ describe 'Users Endpoint', :vcr do
 
         expect(response).to have_http_status(400)
       end
+
+      it 'returns an error message' do 
+        post '/api/v1/users', :params => @bad_pass
+
+        json = JSON.parse(response.body, symbolize_names: true)
+
+        expect(json[:error]).to eq({:message=>"passwords do not match"})  
+      end
     end
   end
 end
