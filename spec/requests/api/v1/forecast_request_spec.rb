@@ -15,8 +15,15 @@ describe 'Forecast API', :vcr do
       it 'returns a json of expected data' do 
         get '/api/v1/forecast?location=denver, co'
         data = JSON.parse(response.body, symbolize_names: true)[:data]
-
+        
         expect(data.keys).to eq([:id, :type, :attributes])
+      end
+      
+      it 'attributes contain current, daily, and hourly weather data' do 
+        get '/api/v1/forecast?location=denver, co'
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+
+        expect(attributes.keys).to eq([:current_weather, :daily_weather, :hourly_weather])
       end
     end
 
