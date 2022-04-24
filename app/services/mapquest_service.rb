@@ -11,7 +11,7 @@ class MapquestService
       request.params['location'] = city
       request.params['outFormat'] = 'json'
     end
-    json = JSON.parse(response.body, symbolize_names: true)
+    json = JSON.parse(response.body, symbolize_names: true)[:results][0][:locations][0][:latLng]
   end
 
 end
