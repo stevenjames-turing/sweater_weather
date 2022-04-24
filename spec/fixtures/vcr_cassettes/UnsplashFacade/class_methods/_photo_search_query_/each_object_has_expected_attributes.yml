@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.unsplash.com/search/photos?client_id=XLUtI-JXRj86iiI0VsYn_r6oucR3SpukKJXKr0cm77g&per_page=1&query=denver%20colorado%20cloudy
+    uri: https://api.unsplash.com/search/photos?client_id=XLUtI-JXRj86iiI0VsYn_r6oucR3SpukKJXKr0cm77g&per_page=1&query=denver,%20co%20scattered%20clouds
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1019'
+      - '1100'
       Server:
       - Cowboy
       Content-Type:
@@ -41,8 +41,8 @@ http_interactions:
       Warning:
       - The tags property in this endpoint is deprecated. https://changelog.unsplash.com/deprecations/2021/07/12/tags-search-deprecation.html
       Link:
-      - <https://api.unsplash.com/search/photos?client_id=XLUtI-JXRj86iiI0VsYn_r6oucR3SpukKJXKr0cm77g&page=10000&per_page=1&query=denver+colorado+cloudy>;
-        rel="last", <https://api.unsplash.com/search/photos?client_id=XLUtI-JXRj86iiI0VsYn_r6oucR3SpukKJXKr0cm77g&page=2&per_page=1&query=denver+colorado+cloudy>;
+      - <https://api.unsplash.com/search/photos?client_id=XLUtI-JXRj86iiI0VsYn_r6oucR3SpukKJXKr0cm77g&page=10000&per_page=1&query=denver%2C+co+scattered+clouds>;
+        rel="last", <https://api.unsplash.com/search/photos?client_id=XLUtI-JXRj86iiI0VsYn_r6oucR3SpukKJXKr0cm77g&page=2&per_page=1&query=denver%2C+co+scattered+clouds>;
         rel="next"
       X-Total:
       - '10000'
@@ -51,15 +51,15 @@ http_interactions:
       Content-Language:
       - en
       Etag:
-      - W/"4cb102f3a2e34f529e1de6b3d0b66ec9"
+      - W/"b158a930398210d15e9d5f61f60fe884"
       X-Ratelimit-Limit:
       - '50'
       X-Ratelimit-Remaining:
-      - '47'
+      - '49'
       X-Request-Id:
-      - 8056cdc9-c238-44f2-807c-fa7c239bea0e
+      - 4ef8d423-9b11-430d-b7af-2b867121b5e2
       X-Runtime:
-      - '0.115122'
+      - '0.140743'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Via:
@@ -67,24 +67,24 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 24 Apr 2022 19:41:26 GMT
+      - Sun, 24 Apr 2022 20:07:15 GMT
       Age:
       - '0'
       X-Served-By:
-      - cache-iad-kiad7000072-IAD, cache-dal21248-DAL
+      - cache-iad-kiad7000145-IAD, cache-dal21268-DAL
       X-Cache:
       - MISS, HIT
       X-Cache-Hits:
       - 0, 1
       X-Timer:
-      - S1650829286.441951,VS0,VE1
+      - S1650830835.049403,VS0,VE1
       Vary:
       - Accept-Encoding, Origin,Authorization,Accept-Language,client-geo-region,Accept
     body:
       encoding: ASCII-8BIT
-      string: '{"total":10000,"total_pages":10000,"results":[{"id":"FORk44FjtYk","created_at":"2016-08-14T15:01:59-04:00","updated_at":"2022-04-24T11:00:47-04:00","promoted_at":"2016-08-14T15:01:59-04:00","width":1825,"height":2281,"color":"#262626","blur_hash":"LaDcdhbIIUt7_NxaWAof-;t7kCof","description":null,"alt_description":"person
-        threw stone during daytime","urls":{"raw":"https://images.unsplash.com/photo-1471201310397-b4dc5f0c49c5?ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY\u0026ixlib=rb-1.2.1","full":"https://images.unsplash.com/photo-1471201310397-b4dc5f0c49c5?crop=entropy\u0026cs=srgb\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY\u0026ixlib=rb-1.2.1\u0026q=85","regular":"https://images.unsplash.com/photo-1471201310397-b4dc5f0c49c5?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=1080","small":"https://images.unsplash.com/photo-1471201310397-b4dc5f0c49c5?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=400","thumb":"https://images.unsplash.com/photo-1471201310397-b4dc5f0c49c5?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=200","small_s3":"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1471201310397-b4dc5f0c49c5"},"links":{"self":"https://api.unsplash.com/photos/FORk44FjtYk","html":"https://unsplash.com/photos/FORk44FjtYk","download":"https://unsplash.com/photos/FORk44FjtYk/download?ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY","download_location":"https://api.unsplash.com/photos/FORk44FjtYk/download?ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY"},"categories":[],"likes":576,"liked_by_user":false,"current_user_collections":[],"sponsorship":null,"topic_submissions":{},"user":{"id":"He1Uhih1Qdg","updated_at":"2022-04-24T14:26:40-04:00","username":"averieclaire","name":"averie
-        woodard","first_name":"averie","last_name":"woodard","twitter_username":null,"portfolio_url":"http://averieclaire.com","bio":null,"location":"Denton,
-        Texas","links":{"self":"https://api.unsplash.com/users/averieclaire","html":"https://unsplash.com/@averieclaire","photos":"https://api.unsplash.com/users/averieclaire/photos","likes":"https://api.unsplash.com/users/averieclaire/likes","portfolio":"https://api.unsplash.com/users/averieclaire/portfolio","following":"https://api.unsplash.com/users/averieclaire/following","followers":"https://api.unsplash.com/users/averieclaire/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1581112693044-f73709d63fe1image?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=32\u0026w=32","medium":"https://images.unsplash.com/profile-1581112693044-f73709d63fe1image?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=64\u0026w=64","large":"https://images.unsplash.com/profile-1581112693044-f73709d63fe1image?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=128\u0026w=128"},"instagram_username":"averieclaire","total_collections":0,"total_likes":2,"total_photos":45,"accepted_tos":false,"for_hire":false,"social":{"instagram_username":"averieclaire","portfolio_url":"http://averieclaire.com","twitter_username":null,"paypal_email":null}},"tags":[]}]}'
-  recorded_at: Sun, 24 Apr 2022 19:41:26 GMT
+      string: '{"total":10000,"total_pages":10000,"results":[{"id":"lkLTeBY2SZE","created_at":"2017-11-21T12:43:55-05:00","updated_at":"2022-04-23T17:02:25-04:00","promoted_at":null,"width":4000,"height":6000,"color":"#f3f3f3","blur_hash":"LuKK~G~qWVIU-;tRM|RPRiWAWAoL","description":"Blue
+        Bear Looking In","alt_description":"blue bear leaning on glass building","urls":{"raw":"https://images.unsplash.com/photo-1511286148006-ec48824e3282?ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkMlMjBjbyUyMHNjYXR0ZXJlZCUyMGNsb3Vkc3xlbnwwfHx8fDE2NTA4MzA4MzQ\u0026ixlib=rb-1.2.1","full":"https://images.unsplash.com/photo-1511286148006-ec48824e3282?crop=entropy\u0026cs=srgb\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkMlMjBjbyUyMHNjYXR0ZXJlZCUyMGNsb3Vkc3xlbnwwfHx8fDE2NTA4MzA4MzQ\u0026ixlib=rb-1.2.1\u0026q=85","regular":"https://images.unsplash.com/photo-1511286148006-ec48824e3282?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkMlMjBjbyUyMHNjYXR0ZXJlZCUyMGNsb3Vkc3xlbnwwfHx8fDE2NTA4MzA4MzQ\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=1080","small":"https://images.unsplash.com/photo-1511286148006-ec48824e3282?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkMlMjBjbyUyMHNjYXR0ZXJlZCUyMGNsb3Vkc3xlbnwwfHx8fDE2NTA4MzA4MzQ\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=400","thumb":"https://images.unsplash.com/photo-1511286148006-ec48824e3282?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkMlMjBjbyUyMHNjYXR0ZXJlZCUyMGNsb3Vkc3xlbnwwfHx8fDE2NTA4MzA4MzQ\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=200","small_s3":"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1511286148006-ec48824e3282"},"links":{"self":"https://api.unsplash.com/photos/lkLTeBY2SZE","html":"https://unsplash.com/photos/lkLTeBY2SZE","download":"https://unsplash.com/photos/lkLTeBY2SZE/download?ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkMlMjBjbyUyMHNjYXR0ZXJlZCUyMGNsb3Vkc3xlbnwwfHx8fDE2NTA4MzA4MzQ","download_location":"https://api.unsplash.com/photos/lkLTeBY2SZE/download?ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkMlMjBjbyUyMHNjYXR0ZXJlZCUyMGNsb3Vkc3xlbnwwfHx8fDE2NTA4MzA4MzQ"},"categories":[],"likes":774,"liked_by_user":false,"current_user_collections":[],"sponsorship":null,"topic_submissions":{},"user":{"id":"7i6Pgr7iunM","updated_at":"2022-04-23T08:45:37-04:00","username":"mirandafayj","name":"Miranda
+        Joondeph","first_name":"Miranda","last_name":"Joondeph","twitter_username":null,"portfolio_url":"http://www.mirandafayj.com","bio":"Graphic
+        Designer | Photographer | Hand Letterer","location":"Denver, CO","links":{"self":"https://api.unsplash.com/users/mirandafayj","html":"https://unsplash.com/@mirandafayj","photos":"https://api.unsplash.com/users/mirandafayj/photos","likes":"https://api.unsplash.com/users/mirandafayj/likes","portfolio":"https://api.unsplash.com/users/mirandafayj/portfolio","following":"https://api.unsplash.com/users/mirandafayj/following","followers":"https://api.unsplash.com/users/mirandafayj/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1511368442822-cb58663a88dd?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=32\u0026w=32","medium":"https://images.unsplash.com/profile-1511368442822-cb58663a88dd?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=64\u0026w=64","large":"https://images.unsplash.com/profile-1511368442822-cb58663a88dd?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=128\u0026w=128"},"instagram_username":"mirandafayj","total_collections":0,"total_likes":1,"total_photos":1,"accepted_tos":false,"for_hire":false,"social":{"instagram_username":"mirandafayj","portfolio_url":"http://www.mirandafayj.com","twitter_username":null,"paypal_email":null}},"tags":[{"type":"search","title":"denver"}]}]}'
+  recorded_at: Sun, 24 Apr 2022 20:07:15 GMT
 recorded_with: VCR 6.1.0
