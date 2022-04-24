@@ -16,8 +16,15 @@ describe 'Backgrounds API', :vcr do
       it 'returns a json of expected data' do 
         get '/api/v1/backgrounds?location=denver, co'
         data = JSON.parse(response.body, symbolize_names: true)[:data]
-
+        
         expect(data.keys).to eq([:id, :type, :attributes])
+      end
+      
+      it 'attributes contain source, image_url, photographer name, and profile' do 
+        get '/api/v1/backgrounds?location=denver, co'
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+
+        expect(attributes.keys).to eq([:source, :image_url, :photographer, :photographer_profile])
       end
     end 
     
