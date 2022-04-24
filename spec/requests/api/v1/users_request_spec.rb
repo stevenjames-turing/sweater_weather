@@ -86,7 +86,14 @@ describe 'Users Endpoint', :vcr do
         expect(response).to have_http_status(400)
       end
 
-      
+      it 'returns an error message' do 
+        post '/api/v1/users', :params => @bad_email
+
+        json = JSON.parse(response.body, symbolize_names: true)
+
+        expect(json[:error]).to eq({:message=>"email has already been taken"})  
+      end
+
     end
   end
 end
