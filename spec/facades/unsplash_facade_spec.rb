@@ -11,7 +11,13 @@ RSpec.describe UnsplashFacade, :vcr do
         expect(@photo).to be_an Photo
       end
 
-      
+      it 'each object has expected attributes' do 
+        
+        expect(@photo.source).to be_a String
+        expect(@photo.image_url).to be_a String
+        expect(@photo.photographer).to be_a String
+        expect(@photo.photographer_profile).to be_a String
+      end
     end
   end
 end
