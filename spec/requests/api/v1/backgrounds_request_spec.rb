@@ -5,11 +5,19 @@ describe 'Backgrounds API', :vcr do
   context 'backgrounds#index' do
 
     context 'happy path' do 
+
       it 'has a successful response' do 
         get '/api/v1/backgrounds?location=denver, co'
         
         expect(response).to be_successful
         expect(response).to have_http_status(200)
+      end
+      
+      it 'returns a json of expected data' do 
+        get '/api/v1/backgrounds?location=denver, co'
+        data = JSON.parse(response.body, symbolize_names: true)[:data]
+
+        expect(data.keys).to eq([:id, :type, :attributes])
       end
     end 
     
