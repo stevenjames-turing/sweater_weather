@@ -1,9 +1,8 @@
 class Photo 
 
-    attr_reader :id, :source, :image_url, :photographer, :photographer_profile
-    
+    attr_reader :source, :image_url, :photographer, :photographer_profile
+
     def initialize(photo_data) 
-        @id = nil
         @source = 'unsplash.com'
         @image_url = photo_data[:urls][:full]
         @photographer = photo_data[:user][:name]
