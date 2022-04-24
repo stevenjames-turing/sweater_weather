@@ -21,11 +21,21 @@ describe 'Users Endpoint', :vcr do
       
       it 'returns a json of expected data' do 
         post '/api/v1/users', :params => @request_body
-
+        
         data = JSON.parse(response.body, symbolize_names: true)[:data]
-
+        
         expect(data.keys).to eq([:id, :type, :attributes])
       end
+      
+      it 'attributes contains email and api_key' do 
+        post '/api/v1/users', :params => @request_body
+
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+
+        expect(attributes.keys).to eq([:email, :api_key])
+      end
+
+      
 
     end
   end
