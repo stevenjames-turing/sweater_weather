@@ -35,7 +35,15 @@ describe 'Users Endpoint', :vcr do
         expect(attributes.keys).to eq([:email, :api_key])
       end
 
-      
+      it 'attributes does NOT contain password' do 
+        post '/api/v1/users', :params => @request_body
+
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+
+        expect(attributes.has_key?(:password)).to be false 
+        expect(attributes.has_key?(:password_digest)).to be false 
+        expect(attributes.has_key?(:password_confirmation)).to be false 
+      end
 
     end
   end
