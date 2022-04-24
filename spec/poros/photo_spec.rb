@@ -89,7 +89,8 @@ RSpec.describe Photo do
   
   it 'has all required attributes' do 
     photo = Photo.new(@photo_data)
-  
+
+    expect(photo.id).to eq('null')
     expect(photo.source).to eq('unsplash.com')
     expect(photo.image_url).to eq('https://images.unsplash.com/photo-1504624244670-373b7257e140?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGV2ZW5pbmclMjBjbG91ZHl8ZW58MHx8fHwxNjUwODI2ODkx&ixlib=rb-1.2.1&q=85')
     expect(photo.photographer).to eq('Alisha Hieb')
