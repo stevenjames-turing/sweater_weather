@@ -3,6 +3,15 @@ require 'rails_helper'
 describe 'Backgrounds API', :vcr do
   
   context 'backgrounds#index' do
+
+    context 'happy path' do 
+      it 'has a successful response' do 
+        get '/api/v1/backgrounds?location=denver, co'
+        
+        expect(response).to be_successful
+        expect(response).to have_http_status(200)
+      end
+    end 
     
     context 'location param is empty' do 
 
