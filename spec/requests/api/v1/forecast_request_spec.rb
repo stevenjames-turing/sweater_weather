@@ -43,8 +43,25 @@ describe 'Forecast API', :vcr do
         expect(attributes[:current_weather][:conditions]).to be_a String
         expect(attributes[:current_weather][:icon]).to be_a String
       end
+
+      it 'daily weather has required data points' do 
+        get '/api/v1/forecast?location=denver, co'
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+
+        attributes[:daily_weather][0].each do |day|
+          expect(day.keys).to eq([:date, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon])
+
+          expect(day[:date]).to be_a String
+          expect(day[:sunrise]).to be_a String
+          expect(day[:sunset]).to be_a String
+          expect(day[:max_temp]).to be_a Float
+          expect(day[:min_temp]).to be_a Float
+          expect(day[:conditions]).to be_a String
+          expect(day[:icon]).to be_a String
+        end
+      end
       
-      
+
     end
 
     context 'location param is empty' do 
