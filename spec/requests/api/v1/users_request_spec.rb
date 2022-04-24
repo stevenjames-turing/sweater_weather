@@ -44,7 +44,22 @@ describe 'Users Endpoint', :vcr do
         expect(attributes.has_key?(:password_digest)).to be false 
         expect(attributes.has_key?(:password_confirmation)).to be false 
       end
+    end
 
+    context 'password does not match' do 
+      before(:each) do 
+        @bad_pass = {
+                          "user": {"email": 'test_email@test.com'},
+                          "password": 'password123',
+                          "password_confirmation": 'password'
+                        }
+      end
+
+      it 'returns a 400 error code' do 
+        post '/api/v1/users', :params => @bad_pass
+
+        expect(response).to have_http_status(400)
+      end
     end
   end
 end
