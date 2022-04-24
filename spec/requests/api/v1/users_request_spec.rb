@@ -69,5 +69,24 @@ describe 'Users Endpoint', :vcr do
         expect(json[:error]).to eq({:message=>"passwords do not match"})  
       end
     end
+
+    context 'user with email already exists in database' do 
+      before(:each) do 
+        User.create!(email: 'test_email@test.com', password: 'testpass', password_confirmation: 'testpass')
+        @bad_email = {
+                          "user": {"email": 'test_email@test.com'},
+                          "password": 'password123',
+                          "password_confirmation": 'password123'
+                        }
+      end
+
+      it 'returns a 400 error code' do 
+        post '/api/v1/users', :params => @bad_email
+
+        expect(response).to have_http_status(400)
+      end
+
+      
+    end
   end
 end
