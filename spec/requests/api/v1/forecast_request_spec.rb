@@ -22,9 +22,29 @@ describe 'Forecast API', :vcr do
       it 'attributes contain current, daily, and hourly weather data' do 
         get '/api/v1/forecast?location=denver, co'
         attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
-
+        
         expect(attributes.keys).to eq([:current_weather, :daily_weather, :hourly_weather])
       end
+      
+      it 'current weather has required data points' do 
+        get '/api/v1/forecast?location=denver, co'
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+        
+        expect(attributes[:current_weather].keys).to eq([:datetime, :sunrise, :sunset, :temperature, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon])
+
+        expect(attributes[:current_weather][:datetime]).to be_a String
+        expect(attributes[:current_weather][:sunrise]).to be_a String
+        expect(attributes[:current_weather][:sunset]).to be_a String
+        expect(attributes[:current_weather][:temperature]).to be_a Float
+        expect(attributes[:current_weather][:feels_like]).to be_a Float
+        expect(attributes[:current_weather][:humidity]).to be_a(Float) | be_an(Integer)
+        expect(attributes[:current_weather][:uvi]).to be_a(Float) | be_an(Integer)
+        expect(attributes[:current_weather][:visibility]).to be_a(Float) | be_an(Integer)
+        expect(attributes[:current_weather][:conditions]).to be_a String
+        expect(attributes[:current_weather][:icon]).to be_a String
+      end
+      
+      
     end
 
     context 'location param is empty' do 
