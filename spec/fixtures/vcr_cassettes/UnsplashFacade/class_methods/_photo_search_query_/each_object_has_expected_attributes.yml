@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.unsplash.com/search/photos?client_id=XLUtI-JXRj86iiI0VsYn_r6oucR3SpukKJXKr0cm77g&per_page=1&query=denver%20colorado%20cloudy
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1019'
+      Server:
+      - Cowboy
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining
+      Cache-Control:
+      - max-age=86400,stale-if-error=3600,stale-while-revalidate=60
+      X-Unsplash-Version:
+      - v1
+      Warning:
+      - The tags property in this endpoint is deprecated. https://changelog.unsplash.com/deprecations/2021/07/12/tags-search-deprecation.html
+      Link:
+      - <https://api.unsplash.com/search/photos?client_id=XLUtI-JXRj86iiI0VsYn_r6oucR3SpukKJXKr0cm77g&page=10000&per_page=1&query=denver+colorado+cloudy>;
+        rel="last", <https://api.unsplash.com/search/photos?client_id=XLUtI-JXRj86iiI0VsYn_r6oucR3SpukKJXKr0cm77g&page=2&per_page=1&query=denver+colorado+cloudy>;
+        rel="next"
+      X-Total:
+      - '10000'
+      X-Per-Page:
+      - '1'
+      Content-Language:
+      - en
+      Etag:
+      - W/"4cb102f3a2e34f529e1de6b3d0b66ec9"
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Remaining:
+      - '47'
+      X-Request-Id:
+      - 8056cdc9-c238-44f2-807c-fa7c239bea0e
+      X-Runtime:
+      - '0.115122'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Via:
+      - 1.1 vegur, 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 24 Apr 2022 19:41:26 GMT
+      Age:
+      - '0'
+      X-Served-By:
+      - cache-iad-kiad7000072-IAD, cache-dal21248-DAL
+      X-Cache:
+      - MISS, HIT
+      X-Cache-Hits:
+      - 0, 1
+      X-Timer:
+      - S1650829286.441951,VS0,VE1
+      Vary:
+      - Accept-Encoding, Origin,Authorization,Accept-Language,client-geo-region,Accept
+    body:
+      encoding: ASCII-8BIT
+      string: '{"total":10000,"total_pages":10000,"results":[{"id":"FORk44FjtYk","created_at":"2016-08-14T15:01:59-04:00","updated_at":"2022-04-24T11:00:47-04:00","promoted_at":"2016-08-14T15:01:59-04:00","width":1825,"height":2281,"color":"#262626","blur_hash":"LaDcdhbIIUt7_NxaWAof-;t7kCof","description":null,"alt_description":"person
+        threw stone during daytime","urls":{"raw":"https://images.unsplash.com/photo-1471201310397-b4dc5f0c49c5?ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY\u0026ixlib=rb-1.2.1","full":"https://images.unsplash.com/photo-1471201310397-b4dc5f0c49c5?crop=entropy\u0026cs=srgb\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY\u0026ixlib=rb-1.2.1\u0026q=85","regular":"https://images.unsplash.com/photo-1471201310397-b4dc5f0c49c5?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=1080","small":"https://images.unsplash.com/photo-1471201310397-b4dc5f0c49c5?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=400","thumb":"https://images.unsplash.com/photo-1471201310397-b4dc5f0c49c5?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=200","small_s3":"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1471201310397-b4dc5f0c49c5"},"links":{"self":"https://api.unsplash.com/photos/FORk44FjtYk","html":"https://unsplash.com/photos/FORk44FjtYk","download":"https://unsplash.com/photos/FORk44FjtYk/download?ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY","download_location":"https://api.unsplash.com/photos/FORk44FjtYk/download?ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMjBjb2xvcmFkbyUyMGNsb3VkeXxlbnwwfHx8fDE2NTA4MjkyODY"},"categories":[],"likes":576,"liked_by_user":false,"current_user_collections":[],"sponsorship":null,"topic_submissions":{},"user":{"id":"He1Uhih1Qdg","updated_at":"2022-04-24T14:26:40-04:00","username":"averieclaire","name":"averie
+        woodard","first_name":"averie","last_name":"woodard","twitter_username":null,"portfolio_url":"http://averieclaire.com","bio":null,"location":"Denton,
+        Texas","links":{"self":"https://api.unsplash.com/users/averieclaire","html":"https://unsplash.com/@averieclaire","photos":"https://api.unsplash.com/users/averieclaire/photos","likes":"https://api.unsplash.com/users/averieclaire/likes","portfolio":"https://api.unsplash.com/users/averieclaire/portfolio","following":"https://api.unsplash.com/users/averieclaire/following","followers":"https://api.unsplash.com/users/averieclaire/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1581112693044-f73709d63fe1image?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=32\u0026w=32","medium":"https://images.unsplash.com/profile-1581112693044-f73709d63fe1image?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=64\u0026w=64","large":"https://images.unsplash.com/profile-1581112693044-f73709d63fe1image?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=128\u0026w=128"},"instagram_username":"averieclaire","total_collections":0,"total_likes":2,"total_photos":45,"accepted_tos":false,"for_hire":false,"social":{"instagram_username":"averieclaire","portfolio_url":"http://averieclaire.com","twitter_username":null,"paypal_email":null}},"tags":[]}]}'
+  recorded_at: Sun, 24 Apr 2022 19:41:26 GMT
+recorded_with: VCR 6.1.0
