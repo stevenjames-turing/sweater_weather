@@ -60,8 +60,20 @@ describe 'Forecast API', :vcr do
           expect(day[:icon]).to be_a String
         end
       end
-      
 
+      it 'hourly weather has required data points' do 
+        get '/api/v1/forecast?location=denver, co'
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+
+        attributes[:hourly_weather][0].each do |hour|
+          expect(hour.keys).to eq([:time, :temperature, :conditions, :icon])
+
+          expect(hour[:time]).to be_a String
+          expect(hour[:temperature]).to be_a Float
+          expect(hour[:conditions]).to be_a String
+          expect(hour[:icon]).to be_a String
+        end
+      end
     end
 
     context 'location param is empty' do 
