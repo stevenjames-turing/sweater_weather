@@ -19,7 +19,14 @@ describe 'Users Endpoint', :vcr do
         expect(response).to have_http_status(201)
       end
       
-      
+      it 'returns a json of expected data' do 
+        post '/api/v1/users', :params => @request_body
+
+        data = JSON.parse(response.body, symbolize_names: true)[:data]
+
+        expect(data.keys).to eq([:id, :type, :attributes])
+      end
+
     end
   end
 end
