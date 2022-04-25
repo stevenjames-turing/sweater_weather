@@ -7,14 +7,18 @@ class Roadtrip
         @id = 'null'
         @start_city = start_city
         @end_city = destination
-        @travel_time = time_formatter(travel_time)
+        @travel_time = travel_time != 'impossible route' ? time_formatter(travel_time) : travel_time
         @weather_at_eta = format_weather(weather_data)
     end
 
     def format_weather(weather_data)
-      forecast = {
-        "temperature": weather_data.temperature,
-        "conditions": weather_data.conditions
-      }
+      if @travel_time == 'impossible route'
+        forecast = {}
+      else 
+        forecast = {
+                      "temperature": weather_data.temperature,
+                      "conditions": weather_data.conditions
+                    }
+      end
     end
 end
