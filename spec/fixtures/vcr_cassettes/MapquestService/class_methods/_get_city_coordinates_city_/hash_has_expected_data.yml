@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 24 Apr 2022 18:01:03 GMT
+      - Mon, 25 Apr 2022 16:35:13 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1038'
+      - '1037'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Sun, 24 Apr 2022 18:01:03 GMT
+      - Mon, 25 Apr 2022 16:35:13 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=844765DEC66167601D6028174E027E24; Path=/; HttpOnly
+      - JSESSIONID=59076587EDEE27A230FDBA83A20DF367; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -52,6 +52,6 @@ http_interactions:
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"St.
         Louis, MO"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"St
-        Louis","adminArea5Type":"City","adminArea4":"St. Louis County","adminArea4Type":"County","adminArea3":"MO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282092004","unknownInput":"","type":"s","latLng":{"lat":38.630276,"lng":-90.200309},"displayLatLng":{"lat":38.630276,"lng":-90.200309},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=dAFPettxbluB2HDNjJSQTo8DUudlJvl5&type=map&size=225,160&locations=38.630276,-90.200309|marker-sm-50318A-1&scalebar=true&zoom=12&rand=2050949818"}]}]}'
-  recorded_at: Sun, 24 Apr 2022 18:01:03 GMT
+        Louis","adminArea5Type":"City","adminArea4":"St. Louis County","adminArea4Type":"County","adminArea3":"MO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282092004","unknownInput":"","type":"s","latLng":{"lat":38.630276,"lng":-90.200309},"displayLatLng":{"lat":38.630276,"lng":-90.200309},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=dAFPettxbluB2HDNjJSQTo8DUudlJvl5&type=map&size=225,160&locations=38.630276,-90.200309|marker-sm-50318A-1&scalebar=true&zoom=12&rand=422798994"}]}]}'
+  recorded_at: Mon, 25 Apr 2022 16:35:13 GMT
 recorded_with: VCR 6.1.0
