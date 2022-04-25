@@ -94,14 +94,21 @@ describe 'Users Endpoint', :vcr do
         expect(json[:error]).to eq({:message=>"email has already been taken"})  
       end
     end
-
+    
     context 'params are passed through URL' do 
       it 'returns a 400 error code' do 
         post '/api/v1/users?email=person@woohoo.com&password=abc123&password_confirmation=abc123'
-
+        
         expect(response).to have_http_status(400)
       end
-
+      
+      it 'returns an error message' do 
+        post '/api/v1/users?email=person@woohoo.com&password=abc123&password_confirmation=abc123'
+  
+        json = JSON.parse(response.body, symbolize_names: true)
+  
+        expect(json[:error]).to eq({:message=>"missing request body"})  
+      end
     end
   end
 end
