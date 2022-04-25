@@ -39,15 +39,15 @@ describe 'RoadTrip Endpoint', :vcr do
         expect(attributes.keys).to eq([:start_city, :end_city, :travel_time, :weather_at_eta])
       end
 
-    #   it 'attributes does NOT contain password' do 
-    #     post '/api/v1/road_trip', :params => @request_body
+      it 'attributes does NOT contain password' do 
+        post '/api/v1/road_trip', :params => @request_body
 
-    #     attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
 
-    #     expect(attributes.has_key?(:password)).to be false 
-    #     expect(attributes.has_key?(:password_digest)).to be false 
-    #     expect(attributes.has_key?(:password_confirmation)).to be false 
-    #   end
+        expect(attributes.has_key?(:password)).to be false 
+        expect(attributes.has_key?(:password_digest)).to be false 
+        expect(attributes.has_key?(:password_confirmation)).to be false 
+      end
     end
 
     context 'params are passed through URL' do 
