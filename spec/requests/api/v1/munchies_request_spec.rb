@@ -33,8 +33,12 @@ describe 'Munchies API', :vcr do
         expect(attributes[:forecast].keys).to eq([:summary, :temperature])
       end
       
-      
-
+      it 'restaurant attributes has name and address' do 
+        get '/api/v1/munchies?start=denver,co&destination=pueblo,co&food=chinese'
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+  
+        expect(attributes[:restaurant].keys).to eq([:name, :address])        
+      end
     end 
 
     context 'MISSING params' do 
