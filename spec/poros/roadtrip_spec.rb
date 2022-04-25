@@ -31,6 +31,7 @@ RSpec.describe Roadtrip do
                     }
     @current_weather = CurrentWeather.new(weather_data)
     @travel_time = "01:45:23"
+    @impossible_route = 'impossible route'
   end
 
   it 'will create a Roadtrip object' do 
@@ -50,5 +51,15 @@ RSpec.describe Roadtrip do
                                     "temperature": 84.09,
                                     "conditions": "broken clouds"
                                   })
+                                end
+                                
+  it 'returns an empty hash of weather data if route is not possible' do 
+    roadtrip = Roadtrip.new(@start_city, @destination, @impossible_route, @current_weather)
+
+    expect(roadtrip.id).to eq('null')
+    expect(roadtrip.start_city).to eq('st. louis, mo')
+    expect(roadtrip.end_city).to eq('denver, co')
+    expect(roadtrip.travel_time).to eq("impossible route")
+    expect(roadtrip.weather_at_eta).to eq({})
   end
 end
