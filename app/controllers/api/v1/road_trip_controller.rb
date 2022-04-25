@@ -5,6 +5,8 @@ class Api::V1::RoadTripController < ApplicationController
     # Returns error message if data was passed through URL
     if params[:road_trip].blank?
       json_response({ "error": {"message" => 'missing request body'} }, :bad_request)
+    elsif (params[:road_trip][:origin].blank?) || (params[:road_trip][:destination].blank?) || (params[:road_trip][:api_key].blank?)
+      json_response({ "error": {"message" => 'required parameters are missing or empty'} }, :bad_request)
     else 
       # If data was given in body, authentication checks occur
       # Checking API key against User database
