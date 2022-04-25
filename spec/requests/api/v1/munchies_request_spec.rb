@@ -53,7 +53,7 @@ describe 'Munchies API', :vcr do
           expect(json[:error]).to eq({:message=>"invalid parameters"})  
         end
       end
-      
+
       context 'food param' do 
         it 'returns a 400 error code' do 
           get '/api/v1/munchies?start=denver,co&destination=pueblo,co'
@@ -72,14 +72,13 @@ describe 'Munchies API', :vcr do
     end
 
     context 'EMPTY/BLANK params' do 
-      context 'start param' do 
-  
+
+     context 'start param' do 
         it 'returns a 400 error code' do 
           get '/api/v1/munchies?start=&destination=pueblo,co&food=chinese'
           
           expect(response).to have_http_status(400)
         end
-        
         it 'returns error message for invalid parameters' do 
           get '/api/v1/munchies?start=&destination=pueblo,co&food=chinese'
           expect(response).to have_http_status(400)
@@ -89,6 +88,8 @@ describe 'Munchies API', :vcr do
           expect(json[:error]).to eq({:message=>"invalid parameters"})  
         end
       end
+
+      
     end
   end 
 end
