@@ -70,7 +70,7 @@ describe 'RoadTrip Endpoint', :vcr do
       end
     end
 
-    context 'params are EMPTY' do 
+    context 'params are MISSING' do 
       context 'origin param' do 
         before(:each) do 
           user = User.create!(email: 'test_email@test.com', password: 'password123', password_confirmation: 'password123')
@@ -142,6 +142,90 @@ describe 'RoadTrip Endpoint', :vcr do
 
         it 'returns an error message' do 
           post '/api/v1/road_trip', :params => @api_key_missing
+  
+          json = JSON.parse(response.body, symbolize_names: true)
+
+          expect(json[:error]).to eq({:message=>"required parameters are missing or empty"})  
+        end
+      end
+
+    end
+
+    context 'params are EMPTY' do 
+      context 'origin param' do 
+        before(:each) do 
+          user = User.create!(email: 'test_email@test.com', password: 'password123', password_confirmation: 'password123')
+          @empty_origin = {
+                            "road_trip": {
+                                          "origin": "",
+                                          "destination": "Pueblo,CO",
+                                          "api_key": "#{user.api_key}"
+                                          }
+                          }
+        end
+
+        it 'returns a 400 error code' do 
+          post '/api/v1/road_trip', :params => @empty_origin
+
+          expect(response).to have_http_status(400)
+        end
+
+        it 'returns an error message' do 
+          post '/api/v1/road_trip', :params => @empty_origin
+  
+          json = JSON.parse(response.body, symbolize_names: true)
+
+          expect(json[:error]).to eq({:message=>"required parameters are missing or empty"})  
+        end
+      end
+      
+      context 'destination param' do 
+        before(:each) do 
+          user = User.create!(email: 'test_email@test.com', password: 'password123', password_confirmation: 'password123')
+          @empty_destination = {
+                            "road_trip": {
+                                          "origin": "Denver,CO",
+                                          "destination": "",
+                                          "api_key": "#{user.api_key}"
+                                          }
+                          }
+        end
+
+        it 'returns a 400 error code' do 
+          post '/api/v1/road_trip', :params => @empty_destination
+
+          expect(response).to have_http_status(400)
+        end
+
+        it 'returns an error message' do 
+          post '/api/v1/road_trip', :params => @empty_destination
+  
+          json = JSON.parse(response.body, symbolize_names: true)
+
+          expect(json[:error]).to eq({:message=>"required parameters are missing or empty"})  
+        end
+      end
+
+      context 'api_key param' do 
+        before(:each) do 
+          user = User.create!(email: 'test_email@test.com', password: 'password123', password_confirmation: 'password123')
+          @empty_api_key = {
+                            "road_trip": {
+                                          "origin": "Denver,CO",
+                                          "destination": "Pueblo,CO",
+                                          "api_key": ""
+                                          }
+                          }
+        end
+
+        it 'returns a 400 error code' do 
+          post '/api/v1/road_trip', :params => @empty_api_key
+
+          expect(response).to have_http_status(400)
+        end
+
+        it 'returns an error message' do 
+          post '/api/v1/road_trip', :params => @empty_api_key
   
           json = JSON.parse(response.body, symbolize_names: true)
 
