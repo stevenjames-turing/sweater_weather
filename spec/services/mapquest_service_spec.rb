@@ -7,7 +7,7 @@ RSpec.describe MapquestService, :vcr do
         @location_data = MapquestService.get_city_coordinates('St. Louis, MO')
       end
 
-      it 'returns a hash of weather data' do 
+      it 'returns a hash of location data' do 
         expect(@location_data).to be_a Hash
       end
 
@@ -23,5 +23,19 @@ RSpec.describe MapquestService, :vcr do
         expect(@location_data[:lng]).to eq(-90.200309)
       end
     end
+
+    context '#directions(start, destination)' do
+      before(:each) do 
+        @route = MapquestService.directions('St. Louis, MO', 'Denver, CO')
+      end
+
+      it 'returns a hash of direction data' do 
+        expect(@route).to be_a Hash
+      end
+
+      it 'hash has expected data' do
+        expect(@route.keys).to eq([:route, :info])
+      end
+    end 
   end
 end
