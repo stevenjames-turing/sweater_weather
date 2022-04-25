@@ -30,7 +30,6 @@ RSpec.describe MapquestService, :vcr do
       end
 
       it 'returns a hash of direction data' do 
-        require 'pry'; binding.pry
         expect(@route).to be_a Hash
       end
     end 
