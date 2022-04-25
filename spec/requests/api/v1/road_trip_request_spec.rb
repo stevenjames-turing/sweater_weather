@@ -253,5 +253,32 @@ describe 'RoadTrip Endpoint', :vcr do
         expect(attributes[:weather_at_eta]).to eq({})
       end
     end
+
+
+
+    context 'invalid api_key' do 
+      before(:each) do 
+        user = User.create!(email: 'test_email@test.com', password: 'password123', password_confirmation: 'password123')
+        @invalid_api_key = {
+                          "road_trip": {
+                                        "origin": "Denver,CO",
+                                        "destination": "London, UK",
+                                        "api_key": "#{user.api_key}12345"
+                                        }
+                        }
+      end
+      it 'returns a 401 error code' do 
+        post '/api/v1/road_trip', :params => @invalid_api_key
+
+        expect(response).to have_http_status(401)
+      end
+      it 'returns an error message' do 
+        post '/api/v1/road_trip', :params => @invalid_api_key
+
+        json = JSON.parse(response.body, symbolize_names: true)
+
+        expect(json[:error]).to eq({:message=>'invalid credentials'})  
+      end
+    end
   end 
 end 
