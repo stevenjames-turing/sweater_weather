@@ -11,6 +11,7 @@ class YelpService
       request.params['latitude'] = latitude
       request.params['longitude'] = longitude
       request.params['term'] = term
+      request.params['open_now'] = true 
     end
 
     json = JSON.parse(response.body, symbolize_names: true)
