@@ -48,5 +48,25 @@ describe 'Sessions Endpoint', :vcr do
         expect(attributes.has_key?(:password_confirmation)).to be false 
       end
     end
+
+    context 'password does not match' do 
+      before(:each) do 
+        User.create!(email: 'test_email@test.com', password: 'password123', password_confirmation: 'password123')
+        @bad_pass = {
+                          "session": {
+                                      "email": 'test_email@test.com', 
+                                      "password": '123passtest'
+                                      }
+                        }
+      end
+
+      it 'returns a 401 error code' do 
+        post '/api/v1/sessions', :params => @bad_pass
+
+        expect(response).to have_http_status(401)
+      end
+
+      
+    end
   end 
 end 
