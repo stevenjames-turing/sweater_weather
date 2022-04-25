@@ -26,6 +26,13 @@ describe 'Munchies API', :vcr do
         expect(attributes.keys).to eq([:destination_city, :travel_time, :forecast, :restaurant])
       end
 
+      it 'forecast attribute has summary and temperature' do 
+        get '/api/v1/munchies?start=denver,co&destination=pueblo,co&food=chinese'
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+
+        expect(attributes[:forecast].keys).to eq([:summary, :temperature])
+      end
+      
       
 
     end 
