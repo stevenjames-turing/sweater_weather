@@ -20,21 +20,43 @@ describe 'Munchies API', :vcr do
       end
     end 
 
-    context 'start param is empty' do 
+    context 'MISSING params' do 
+      context 'start param' do 
 
-      it 'returns a 400 error code' do 
-        get '/api/v1/munchies?start=&destination=pueblo,co&food=chinese'
+        it 'returns a 400 error code' do 
+          get '/api/v1/munchies?destination=pueblo,co&food=chinese'
+          
+          expect(response).to have_http_status(400)
+        end
         
-        expect(response).to have_http_status(400)
+        it 'returns error message for invalid parameters' do 
+          get '/api/v1/munchies?destination=pueblo,co&food=chinese'
+          expect(response).to have_http_status(400)
+          
+          json = JSON.parse(response.body, symbolize_names: true)
+          
+          expect(json[:error]).to eq({:message=>"invalid parameters"})  
+        end
       end
-      
-      it 'returns error message for invalid parameters' do 
-        get '/api/v1/munchies?start=&destination=pueblo,co&food=chinese'
-        expect(response).to have_http_status(400)
+    end
+
+    context 'EMPTY/BLANK params' do 
+      context 'start param' do 
+  
+        it 'returns a 400 error code' do 
+          get '/api/v1/munchies?start=&destination=pueblo,co&food=chinese'
+          
+          expect(response).to have_http_status(400)
+        end
         
-        json = JSON.parse(response.body, symbolize_names: true)
-        
-        expect(json[:error]).to eq({:message=>"invalid parameters"})  
+        it 'returns error message for invalid parameters' do 
+          get '/api/v1/munchies?start=&destination=pueblo,co&food=chinese'
+          expect(response).to have_http_status(400)
+          
+          json = JSON.parse(response.body, symbolize_names: true)
+          
+          expect(json[:error]).to eq({:message=>"invalid parameters"})  
+        end
       end
     end
   end 
