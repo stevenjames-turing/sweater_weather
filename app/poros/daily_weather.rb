@@ -1,5 +1,5 @@
 class DailyWeather
-  include DateFormatter
+  include DateTimeFormatter
 
   attr_reader :date, :sunrise, :sunset, :max_temp, :min_temp, 
               :conditions, :icon

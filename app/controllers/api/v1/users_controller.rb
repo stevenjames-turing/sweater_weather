@@ -1,6 +1,8 @@
 class Api::V1::UsersController < ApplicationController
 
   def create
+    # Checks to ensure data was passed through body and not through URL
+    # Returns error message if data was passed through URL
     if params[:user].blank?
       json_response({ "error": {"message" => 'missing request body'} }, :bad_request)
     else

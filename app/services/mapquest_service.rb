@@ -13,6 +13,15 @@ class MapquestService
     end
     json = JSON.parse(response.body, symbolize_names: true)[:results][0][:locations][0][:latLng]
   end
+  
+  def self.directions(start, destination)
+    response = conn.get('directions/v2/route') do |request|
+      request.params['from'] = start
+      request.params['to'] = destination
+      request.params['outFormat'] = 'json'
+    end
+    json = JSON.parse(response.body, symbolize_names: true)
+  end
 
   def self.directions(start, destination)
     response = conn.get('directions/v2/route') do |request|
