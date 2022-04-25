@@ -151,5 +151,31 @@ describe 'Sessions Endpoint', :vcr do
         expect(json[:error]).to eq({:message=>"invalid credentials"})  
       end
     end
+
+    context 'password missing' do 
+      before(:each) do 
+        User.create!(email: 'test_email@test.com', password: 'password123', password_confirmation: 'password123')
+        @missing_pass = {
+                          "session": {
+                                      "email": 'wrong_email@test.com'
+                                      }
+                        }
+      end
+
+      it 'returns a 401 error code' do 
+        post '/api/v1/sessions', :params => @missing_pass
+
+        expect(response).to have_http_status(401)
+      end
+
+      it 'returns an error message' do 
+        post '/api/v1/sessions', :params => @missing_pass
+
+        json = JSON.parse(response.body, symbolize_names: true)
+
+        expect(json[:error]).to eq({:message=>"invalid credentials"})  
+      end
+    end
+
   end 
 end 
