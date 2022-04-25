@@ -30,7 +30,12 @@ class Api::V1::RoadTripController < ApplicationController
   private 
 
     def get_route(start, destination)
-      @travel_time = MapquestService.directions(start, destination)[:route][:formattedTime]
+      directions = MapquestService.directions(start, destination)
+      if directions[:info][:statuscode] == 402
+        @travel_time = 'impossible route'
+      else 
+        @travel_time = directions[:route][:formattedTime]
+      end
     end
 
     def get_destination_coordinates(location)
