@@ -1,5 +1,5 @@
 class HourlyWeather
-  include DateFormatter
+  include DateTimeFormatter
 
   attr_reader :time, :temperature, :conditions, :icon
 
