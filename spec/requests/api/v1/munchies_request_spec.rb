@@ -15,9 +15,19 @@ describe 'Munchies API', :vcr do
       it 'returns a json of expected data' do 
         get '/api/v1/munchies?start=denver,co&destination=pueblo,co&food=chinese'
         data = JSON.parse(response.body, symbolize_names: true)[:data]
-    
+        
         expect(data.keys).to eq([:id, :type, :attributes])
       end
+      
+      it 'attributes match expected json contract' do 
+        get '/api/v1/munchies?start=denver,co&destination=pueblo,co&food=chinese'
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+
+        expect(attributes.keys).to eq([:destination_city, :travel_time, :forecast, :restaurant])
+      end
+
+      
+
     end 
 
     context 'MISSING params' do 
