@@ -6,6 +6,7 @@ namespace :api do
       resources :backgrounds, only: [:index]
       resources :forecast, only: [:index]
       resources :users, only: [:create]
+      resources :munchies, only: [:index]
     end
   end
 
