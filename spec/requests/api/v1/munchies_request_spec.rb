@@ -19,5 +19,23 @@ describe 'Munchies API', :vcr do
         expect(data.keys).to eq([:id, :type, :attributes])
       end
     end 
+
+    context 'start param is empty' do 
+
+      it 'returns a 400 error code' do 
+        get '/api/v1/munchies?start=&destination=pueblo,co&food=chinese'
+        
+        expect(response).to have_http_status(400)
+      end
+      
+      it 'returns error message for invalid parameters' do 
+        get '/api/v1/munchies?start=&destination=pueblo,co&food=chinese'
+        expect(response).to have_http_status(400)
+        
+        json = JSON.parse(response.body, symbolize_names: true)
+        
+        expect(json[:error]).to eq({:message=>"invalid parameters"})  
+      end
+    end
   end 
 end
