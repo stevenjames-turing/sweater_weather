@@ -7,14 +7,36 @@ class Api::V1::RoadTripController < ApplicationController
       json_response({ "error": {"message" => 'missing request body'} }, :bad_request)
     else 
       # If data was given in body, authentication checks occur
-      # user = User.find_by(api_key: params[:road_trip][:api_key])
-      # if user
+      # Checking API key against User database
+      user = User.find_by(api_key: params[:road_trip][:api_key])
+      if user
+        get_destination_coordinates(params[:road_trip][:destination])
+        get_route(params[:road_trip][:origin], params[:road_trip][:destination])
+        get_current_conditions(@destination_coordinates[:lat], @destination_coordinates[:lng])
+
+        roadtrip = Roadtrip.new(params[:road_trip][:origin], params[:road_trip][:destination], @travel_time, @current_conditions)
+        
         # Serialized JSON response if all authentication checks pass
-        # json_response(UserSerializer.new(user))
-      # else 
+        json_response(RoadtripSerializer.new(roadtrip))
+      else 
         # Error message is the same if email or password fail validations
-        # json_response({ "error": {"message" => 'invalid credentials'} }, :unauthorized)
-      # end
+        json_response({ "error": {"message" => 'invalid credentials'} }, :unauthorized)
+      end
     end 
   end
+
+  private 
+
+    def get_route(start, destination)
+      @travel_time = MapquestService.directions(start, destination)[:route][:formattedTime]
+    end
+
+    def get_destination_coordinates(location)
+      @destination_coordinates = MapquestService.get_city_coordinates(location)
+    end
+    
+    def get_current_conditions(latitude, longitude)
+      @current_conditions = OpenweatherFacade.current_weather(latitude, longitude)
+    end
+
 end
