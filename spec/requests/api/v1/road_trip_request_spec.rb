@@ -246,6 +246,12 @@ describe 'RoadTrip Endpoint', :vcr do
 
         expect(attributes[:travel_time]).to eq('impossible route')
       end
+      it 'returns empty hash for weather if impossible route' do 
+        post '/api/v1/road_trip', :params => @request_body
+        attributes = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+
+        expect(attributes[:weather_at_eta]).to eq({})
+      end
     end
   end 
 end 
