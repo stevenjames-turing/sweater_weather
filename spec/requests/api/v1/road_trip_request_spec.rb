@@ -97,8 +97,33 @@ describe 'RoadTrip Endpoint', :vcr do
         end
       end
       
-      
+      context 'destination param' do 
+        before(:each) do 
+          user = User.create!(email: 'test_email@test.com', password: 'password123', password_confirmation: 'password123')
+          @destination_missing = {
+                          "road_trip": {
+                                        "origin": "Denver,CO",
+                                        "api_key": "#{user.api_key}"
+                                        }
+                        }
+        end
 
+        it 'returns a 400 error code' do 
+          post '/api/v1/road_trip', :params => @destination_missing
+
+          expect(response).to have_http_status(400)
+        end
+
+        it 'returns an error message' do 
+          post '/api/v1/road_trip', :params => @destination_missing
+  
+          json = JSON.parse(response.body, symbolize_names: true)
+
+          expect(json[:error]).to eq({:message=>"required parameters are missing or empty"})  
+        end
+      end
+
+      
     end
   end 
 end 
