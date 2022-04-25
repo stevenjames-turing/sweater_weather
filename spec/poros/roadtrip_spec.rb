@@ -45,7 +45,7 @@ RSpec.describe Roadtrip do
     expect(roadtrip.id).to eq('null')
     expect(roadtrip.start_city).to eq('st. louis, mo')
     expect(roadtrip.end_city).to eq('denver, co')
-    expect(roadtrip.travel_time).to eq("01:45:23")
+    expect(roadtrip.travel_time).to eq("01 hours, 45 minutes")
     expect(roadtrip.weather_at_eta).to eq({
                                     "temperature": 84.09,
                                     "conditions": "broken clouds"

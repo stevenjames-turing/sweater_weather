@@ -7,7 +7,7 @@ class Roadtrip
         @id = 'null'
         @start_city = start_city
         @end_city = destination
-        @travel_time = travel_time
+        @travel_time = time_formatter(travel_time)
         @weather_at_eta = format_weather(weather_data)
     end
 
