@@ -14,6 +14,12 @@ RSpec.describe YelpService, :vcr do
       it 'returns a hash of restaurant data' do 
         expect(@yelp_data).to be_a Hash
       end
+
+      it 'limits restaurants to only ones that are currently open' do 
+        @yelp_data[:businesses].each do |business|
+          expect(business[:is_closed]).to be false
+        end
+      end
     end
   end
 end
