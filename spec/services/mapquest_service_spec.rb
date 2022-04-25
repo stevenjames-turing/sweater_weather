@@ -32,6 +32,10 @@ RSpec.describe MapquestService, :vcr do
       it 'returns a hash of direction data' do 
         expect(@route).to be_a Hash
       end
+
+      it 'hash has expected data' do
+        expect(@route.keys).to eq([:route, :info])
+      end
     end 
   end
 end
