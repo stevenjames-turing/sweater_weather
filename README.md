@@ -34,12 +34,16 @@
 3. Setup the database: `rails db:{create,migrate}`
 4. Get OpenWeather API key [here](https://openweathermap.org/)
 5. Get MapQuest Geocoding API key [here](https://developer.mapquest.com/documentation/geocoding-api/)
-6. Setup Figaro: `bundle exec figaro install`
-7. Add API keys to `config/application.yml`
+6. Get Unsplash API key [here](https://unsplash.com/developers)
+7. Get Yelp API key [here](https://www.yelp.com/developers/documentation/v3)
+8. Setup Figaro: `bundle exec figaro install`
+9. Add API keys to `config/application.yml`
  - 
     ```
     openweather_key: <put_your_key_here>
     mapquest_key: <put_your_key_here>
+    unsplash_key: <put_your_key_here>
+    yelp_key: <put_your_key_here>
     ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -63,7 +67,15 @@
     - **HOW WAS IT USED**
     - Endpoints Used:
       - 
-  - MapQuest Geocoding 
+  - MapQuest 
+    - **HOW WAS IT USED**
+    - Endpoints Used: 
+      - 
+  - Unsplash
+    - **HOW WAS IT USED**
+    - Endpoints Used:
+      - 
+  - Yelp Fusion 
     - **HOW WAS IT USED**
     - Endpoints Used: 
       - 
