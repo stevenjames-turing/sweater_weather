@@ -22,8 +22,8 @@
 
 ## About The Project
 
-- **INFO ABOUT THE PROJECT**
-- **ADDITIONAL INFO ABOUT PROJECT???** 
+- Have you ever taken a short day trip only to arrive and realize you didn't prepare for the weather? Have you ever checked the weather just to have the conditions be completely different by time you arrived? Sweater Weather is designed as an application to help users better plan road trips. The app includes weather forecasts for the destination city at your estimated arrival time along with Yelp restaurant suggestions at the destination city. 
+- Sweater Weather is the final project for third moduel of Turing's Back-End Engineer program. It's designed to mimic a service-oriented architecture. My job was to expose an API that satisfies the requirements of my front-end users. 
 - [Turing Project Page](https://backend.turing.edu/module3/projects/sweater_weather/)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -360,13 +360,24 @@
 
   ### Consumed:
     - OpenWeather
-      - Endpoints Used:
-    - MapQuest 
-      - Endpoints Used: 
+      - [One Call API 1.0](https://openweathermap.org/api/one-call-api)
+        - `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`
+        - Used for weather forecast data. We are utilizing Current, Hourly, and Daily data.
+    - MapQuest
+      - [Directions API - Route](https://developer.mapquest.com/documentation/directions-api/route/get)
+        - `http://www.mapquestapi.com/directions/v2/route?key=KEY&from=Clarendon Blvd,Arlington,VA&to=2400+S+Glebe+Rd,+Arlington,+VA`
+        - Used for getting drive time to determine ETA for destination
+      - [Geocoding API - Address](https://developer.mapquest.com/documentation/geocoding-api/address/get)
+        - `http://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=Washington,DC`
+        - Used for retrieving latitude and longitude coordinates for destination, which is then passed into the OpenWeather API
     - Unsplash
-      - Endpoints Used:
+      - [Search Photos](https://unsplash.com/documentation#search-photos)
+        - `https://api.unsplash.com/search/photos?page=1&query=cloudy`
+        - Used to retrieve a photo to display on landing page. We are using the destination and weather conditions as a search query to return photos relevant to our users experience.
     - Yelp Fusion 
-      - Endpoints Used: 
+      - [Business Search](https://www.yelp.com/developers/documentation/v3/business_search)
+        - `https://api.yelp.com/v3/businesses/search?term=tacos&location=denver,co`
+        - Used to search for restaurants at destination city that will be open at time of arrival that matches food/restaurant type selected in request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
