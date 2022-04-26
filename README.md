@@ -391,7 +391,6 @@
 - Other tech used: 
   - Postman
   - RSpec 
-  - **WHAT OTHER TECHS WERE USED???**
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributors
