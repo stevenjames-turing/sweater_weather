@@ -37,8 +37,8 @@ RSpec.describe OpenweatherFacade, :vcr do
         expect(@hourly).to be_an Array
       end
 
-      it 'returns the next 8 hours weather data' do 
-        expect(@hourly.count).to eq(8)
+      it 'returns the next 48 hours weather data' do 
+        expect(@hourly.count).to eq(48)
       end
 
       it 'each object has expected attributes' do 
