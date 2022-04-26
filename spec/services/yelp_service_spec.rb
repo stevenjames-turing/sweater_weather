@@ -4,7 +4,7 @@ RSpec.describe YelpService, :vcr do
   context 'class methods' do 
     context '#business_search(latitude, longitude, term)' do
       before(:each) do 
-        @yelp_data = YelpService.business_search(38.630276, -90.200309, 'tacos')
+        @yelp_data = YelpService.business_search('st. louis, mo', 'tacos')
       end
 
       it 'accepts authorization token' do 
