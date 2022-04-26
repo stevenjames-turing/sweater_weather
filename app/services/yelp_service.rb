@@ -5,11 +5,10 @@ class YelpService
     end
   end
   
-  def self.business_search(latitude, longitude, term)
+  def self.business_search(location, term)
     response = conn.get('/v3/businesses/search') do |request|
       request.headers['Authorization'] = "Bearer #{ENV['yelp_key']}"
-      request.params['latitude'] = latitude
-      request.params['longitude'] = longitude
+      request.params['location'] = location
       request.params['term'] = term
       request.params['open_now'] = true 
     end

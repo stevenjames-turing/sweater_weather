@@ -1,7 +1,7 @@
 class YelpFacade
 
-  def self.business_search(latitude, longitude, term)
-    json = YelpService.business_search(latitude, longitude, term)
+  def self.business_search(location, term)
+    json = YelpService.business_search(location, term)
 
     Restaurant.new(json[:businesses].first)
   end
