@@ -16,6 +16,7 @@
       </ul>
     </li>
     <li><a href="#built-with">Built With</a></li>
+    <li><a href="#future_additions">Future Additions</a></li>
     <li><a href="Contributors">Contributors</a></li>
   </ol>
 </details>
@@ -25,6 +26,7 @@
 - Have you ever taken a short day trip only to arrive and realize you didn't prepare for the weather? Have you ever checked the weather just to have the conditions be completely different by time you arrived? Sweater Weather is designed as an application to help users better plan road trips. The app includes weather forecasts for the destination city at your estimated arrival time along with Yelp restaurant suggestions at the destination city. 
 - Sweater Weather is the final project for third moduel of Turing's Back-End Engineer program. It's designed to mimic a service-oriented architecture. My job was to expose an API that satisfies the requirements of my front-end users. 
 - [Turing Project Page](https://backend.turing.edu/module3/projects/sweater_weather/)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
@@ -45,6 +47,7 @@
     unsplash_key: <put_your_key_here>
     yelp_key: <put_your_key_here>
     ```
+    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## API Info:
@@ -357,6 +360,8 @@
       }
     ```
     
+    <p align="right">(<a href="#top">back to top</a>)</p>
+    
 
   ### Consumed:
     - OpenWeather
@@ -391,6 +396,23 @@
 - Other tech used: 
   - Postman
   - RSpec 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Future Additions:
+
+- I completed this project over the course of 4 days and was able to implement all of the requirements for the project, however I have identified a couple addditions that would be great additions. 
+<ol>
+  <li>
+    Caching - Each endpoint is using multiple service calls to external APIs. In some cases, there are actually multiple calls to the same API (weather forecasts). Caching would be a huge boost to performance for the application and would reduce required external API calls as well. 
+  </li>
+  <li>
+    Events in destination city - Yelp has an API endpoint that would allow me to get events in a location. There is not a limiting parameter for specific dates or times, but that would be easy enough to parse within a Facade. 
+  </li>
+  <li>
+    Places of Interest - I think it would be fun to display interesting/historic destinations that are along the travel route. I could even implement some logic that only displayed outdoor destinations if the weather was warmer than a certain threshold. 
+  </li>
+</ol>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributors
