@@ -18,7 +18,7 @@ class Api::V1::ForecastController < ApplicationController
 
     def get_weather_forecasts(latitude, longitude)
       @current_weather = OpenweatherFacade.current_weather(latitude, longitude)
-      @hourly_weather = OpenweatherFacade.hourly_weather(latitude, longitude)
+      @hourly_weather = OpenweatherFacade.hourly_weather(latitude, longitude)[0..7]
       @daily_weather = OpenweatherFacade.daily_weather(latitude, longitude)
     end
 end
