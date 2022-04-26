@@ -14,9 +14,9 @@ class Api::V1::RoadTripController < ApplicationController
       if user
         get_destination_coordinates(params[:road_trip][:destination])
         get_route(params[:road_trip][:origin], params[:road_trip][:destination])
-        get_current_conditions(@destination_coordinates[:lat], @destination_coordinates[:lng])
+        get_condition_at_eta(@destination_coordinates[:lat], @destination_coordinates[:lng], @travel_time)
 
-        roadtrip = Roadtrip.new(params[:road_trip][:origin], params[:road_trip][:destination], @travel_time, @current_conditions)
+        roadtrip = Roadtrip.new(params[:road_trip][:origin], params[:road_trip][:destination], @travel_time, @condition_at_eta)
         
         # Serialized JSON response if all authentication checks pass
         json_response(RoadtripSerializer.new(roadtrip))
@@ -42,8 +42,16 @@ class Api::V1::RoadTripController < ApplicationController
       @destination_coordinates = MapquestService.get_city_coordinates(location)
     end
     
-    def get_current_conditions(latitude, longitude)
-      @current_conditions = OpenweatherFacade.current_weather(latitude, longitude)
+    def get_condition_at_eta(latitude, longitude, travel_time)
+      if travel_time != 'impossible route'
+        hours_to_eta = travel_time.split(":")[0].to_i
+        if hours_to_eta <= 49
+          @condition_at_eta = OpenweatherFacade.hourly_weather(latitude, longitude)[hours_to_eta - 1]
+        else
+          @condition_at_eta = OpenweatherFacade.hourly_weather(latitude, longitude)[-1]
+        end
+      else 
+        'nil'
+      end
     end
-
 end
