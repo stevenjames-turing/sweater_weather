@@ -13,7 +13,7 @@ class OpenweatherFacade
     json = OpenweatherService.all_weather(latitude, longitude)
 
     # Creates objects for only the next 8 hours
-    hourly_weather = json[:hourly][0..7].map do |hour_data|
+    hourly_weather = json[:hourly].map do |hour_data|
       HourlyWeather.new(hour_data)
     end
   end
