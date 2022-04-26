@@ -2,25 +2,33 @@ class Munchie
 
     attr_reader :id, :destination_city, :travel_time, :forecast, :restaurant
 
-    def initialize(destination, weather_data, travel_time, restaurant) 
+    def initialize(start_location, destination, food_preference) 
         @id = 'null'
         @destination_city = destination
-        @travel_time = travel_time
-        @forecast = format_forecast(weather_data)
-        @restaurant = format_restaurant(restaurant)
+        @travel_time = calculate_travel_time(start_location, destination)
+        @forecast = current_weather_conditions(destination)
+        @restaurant = restaurant_at_destination(destination, food_preference)
     end
 
-    def format_forecast(weather_data)
+    def calculate_travel_time(start_location, destination)
+      MapquestService.directions(start_location, destination)[:route][:formattedTime]
+    end
+
+    def restaurant_at_destination(destination, food_preference)
+      restaurant = YelpFacade.business_search(destination, food_preference)
+      
+      return_hash = {
+                      "name": restaurant.name,
+                      "address": restaurant.address
+                    }
+    end
+
+    def current_weather_conditions(destination)
+      weather = OpenweatherFacade.weather_forecast(destination, "current")
+
       forecast = {
-        "summary": weather_data.conditions,
-        "temperature": weather_data.temperature
-      }
-    end
-
-    def format_restaurant(restaurant_data)
-      restaurant = {
-        "name": restaurant_data.name,
-        "address": restaurant_data.address
-      }
+                  "summary": weather.conditions,
+                  "temperature": weather.temperature
+                }
     end
 end

@@ -1,0 +1,466 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/directions/v2/route?from=st.%20louis,%20mo&key=dAFPettxbluB2HDNjJSQTo8DUudlJvl5&outFormat=json&to=denver,%20co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 26 Apr 2022 18:56:54 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Set-Cookie:
+      - JSESSIONID=CF074C567612B5A437D93765A2271084; Path=/directions; HttpOnly
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Last-Modified:
+      - Tue, 26 Apr 2022 18:56:54 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Status:
+      - success
+      Transactionweight:
+      - '1'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJoYXNUb2xsUm9hZCI6dHJ1ZSwiaGFzQnJpZGdlIjp0cnVlLCJib3VuZGluZ0JveCI6eyJsciI6eyJsbmciOi05MC4yMDAzMSwibGF0IjozOC42MjU4MzV9LCJ1bCI6eyJsbmciOi0xMDQuOTkyOTA1LCJsYXQiOjM5Ljc4MDcyN319LCJkaXN0YW5jZSI6ODUxLjU0NiwiaGFzVGltZWRSZXN0cmljdGlvbiI6ZmFsc2UsImhhc1R1bm5lbCI6dHJ1ZSwiaGFzSGlnaHdheSI6dHJ1ZSwiY29tcHV0ZWRXYXlwb2ludHMiOltdLCJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6LTQwMCwibWVzc2FnZSI6IiJ9LCJmb3JtYXR0ZWRUaW1lIjoiMTI6MDY6MTkiLCJzZXNzaW9uSWQiOiI2MjY4NDA3Ni0wMDU1LTY3NTAtMDJiNC0zNTY4LTBhNTM1MDdkOGIzYiIsImhhc0FjY2Vzc1Jlc3RyaWN0aW9uIjpmYWxzZSwicmVhbFRpbWUiOjQ1NjkzLCJoYXNTZWFzb25hbENsb3N1cmUiOmZhbHNlLCJoYXNDb3VudHJ5Q3Jvc3MiOmZhbHNlLCJmdWVsVXNlZCI6NDMuOSwibGVncyI6W3siaGFzVG9sbFJvYWQiOnRydWUsImhhc0JyaWRnZSI6dHJ1ZSwiZGVzdE5hcnJhdGl2ZSI6IlByb2NlZWQgdG8gREVOVkVSLCBDTy4iLCJkaXN0YW5jZSI6ODUxLjU0NiwiaGFzVGltZWRSZXN0cmljdGlvbiI6ZmFsc2UsImhhc1R1bm5lbCI6dHJ1ZSwiaGFzSGlnaHdheSI6dHJ1ZSwiaW5kZXgiOjAsImZvcm1hdHRlZFRpbWUiOiIxMjowNjoxOSIsIm9yaWdJbmRleCI6MSwiaGFzQWNjZXNzUmVzdHJpY3Rpb24iOmZhbHNlLCJoYXNTZWFzb25hbENsb3N1cmUiOmZhbHNlLCJoYXNDb3VudHJ5Q3Jvc3MiOmZhbHNlLCJyb2FkR3JhZGVTdHJhdGVneSI6W1tdXSwiZGVzdEluZGV4Ijo1LCJ0aW1lIjo0MzU3OSwiaGFzVW5wYXZlZCI6ZmFsc2UsIm9yaWdOYXJyYXRpdmUiOiJHbyB3ZXN0IG9uIEktNjQgVy9VUy00MCBXLiIsIm1hbmV1dmVycyI6W3siZGlzdGFuY2UiOjAuMzE5LCJzdHJlZXRzIjpbIk4gMTR0aCBTdCJdLCJuYXJyYXRpdmUiOiJTdGFydCBvdXQgZ29pbmcgc291dGggb24gTiAxNHRoIFN0IHRvd2FyZCBQaW5lIFN0LiIsInR1cm5UeXBlIjowLCJzdGFydFBvaW50Ijp7ImxuZyI6LTkwLjIwMDMxLCJsYXQiOjM4LjYzMDI3Nn0sImluZGV4IjowLCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6NDIiLCJkaXJlY3Rpb25OYW1lIjoiU291dGgiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbXSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9ZEFGUGV0dHhibHVCMkhETmpKU1FUbzhEVXVkbEp2bDUmc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOC42MzAyNzU3MjYzMTgzNiwtOTAuMjAwMzA5NzUzNDE3OTd8bWFya2VyLTF8fDM4LjYyNTgzNTQxODcwMTE3LC05MC4yMDE5NDI0NDM4NDc2NnxtYXJrZXItMnx8JmNlbnRlcj0zOC42MjgwNTU1NzI1MDk3NjYsLTkwLjIwMTEyNjA5ODYzMjgxJmRlZmF1bHRNYXJrZXI9bm9uZSZ6b29tPTExJnJhbmQ9LTE4OTA5NzQxODYmc2Vzc2lvbj02MjY4NDA3Ni0wMDU1LTY3NTAtMDJiNC0zNTY4LTBhNTM1MDdkOGIzYiIsInRyYW5zcG9ydE1vZGUiOiJBVVRPIiwiYXR0cmlidXRlcyI6MCwidGltZSI6NDIsImljb25VcmwiOiJodHRwOi8vY29udGVudC5tcWNkbi5jb20vbXFzaXRlL3R1cm5zaWducy9pY29uLWRpcnMtc3RhcnRfc20uZ2lmIiwiZGlyZWN0aW9uIjo0fSx7ImRpc3RhbmNlIjozOS42LCJzdHJlZXRzIjpbIkktNjQgVyIsIlVTLTQwIFciXSwibmFycmF0aXZlIjoiTWVyZ2Ugb250byBJLTY0IFcvVVMtNDAgVyB2aWEgdGhlIHJhbXAgb24gdGhlIGxlZnQuIiwidHVyblR5cGUiOjExLCJzdGFydFBvaW50Ijp7ImxuZyI6LTkwLjIwMTk0MiwibGF0IjozOC42MjU4MzV9LCJpbmRleCI6MSwiZm9ybWF0dGVkVGltZSI6IjAwOjQwOjE1IiwiZGlyZWN0aW9uTmFtZSI6Ildlc3QiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbeyJleHRyYVRleHQiOiIiLCJ0ZXh0IjoiNjQiLCJ0eXBlIjoxLCJ1cmwiOiJodHRwOi8vaWNvbnMubXFjZG4uY29tL2ljb25zL3JzMS5wbmc/bj02NCZkPVdFU1QiLCJkaXJlY3Rpb24iOjd9LHsiZXh0cmFUZXh0IjoiIiwidGV4dCI6IjQwIiwidHlwZSI6MiwidXJsIjoiaHR0cDovL2ljb25zLm1xY2RuLmNvbS9pY29ucy9yczIucG5nP249NDAmZD1XRVNUIiwiZGlyZWN0aW9uIjo3fV0sIm1hcFVybCI6Imh0dHA6Ly93d3cubWFwcXVlc3RhcGkuY29tL3N0YXRpY21hcC92NS9tYXA/a2V5PWRBRlBldHR4Ymx1QjJIRE5qSlNRVG84RFV1ZGxKdmw1JnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzguNjI1ODM1NDE4NzAxMTcsLTkwLjIwMTk0MjQ0Mzg0NzY2fG1hcmtlci0yfHwzOC44MDc1OTQyOTkzMTY0MDYsLTkwLjgzNzUyNDQxNDA2MjV8bWFya2VyLTN8fCZjZW50ZXI9MzguNzE2NzE0ODU5MDA4NzksLTkwLjUxOTczMzQyODk1NTA4JmRlZmF1bHRNYXJrZXI9bm9uZSZ6b29tPTUmcmFuZD0tMTg5MDk3NDE4NiZzZXNzaW9uPTYyNjg0MDc2LTAwNTUtNjc1MC0wMmI0LTM1NjgtMGE1MzUwN2Q4YjNiIiwidHJhbnNwb3J0TW9kZSI6IkFVVE8iLCJhdHRyaWJ1dGVzIjoxMTUyLCJ0aW1lIjoyNDE1LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfbWVyZ2VfbGVmdF9zbS5naWYiLCJkaXJlY3Rpb24iOjd9LHsiZGlzdGFuY2UiOjIwNy41NjUsInN0cmVldHMiOlsiSS03MCBXIl0sIm5hcnJhdGl2ZSI6Ik1lcmdlIG9udG8gSS03MCBXIHZpYSB0aGUgZXhpdCBvbiB0aGUgbGVmdCB0b3dhcmQgS2Fuc2FzIENpdHkuIiwidHVyblR5cGUiOjExLCJzdGFydFBvaW50Ijp7ImxuZyI6LTkwLjgzNzUyNCwibGF0IjozOC44MDc1OTR9LCJpbmRleCI6MiwiZm9ybWF0dGVkVGltZSI6IjAzOjAzOjIyIiwiZGlyZWN0aW9uTmFtZSI6Ildlc3QiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbeyJleHRyYVRleHQiOiIiLCJ0ZXh0IjoiNzAiLCJ0eXBlIjoxLCJ1cmwiOiJodHRwOi8vaWNvbnMubXFjZG4uY29tL2ljb25zL3JzMS5wbmc/bj03MCZkPVdFU1QiLCJkaXJlY3Rpb24iOjd9XSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9ZEFGUGV0dHhibHVCMkhETmpKU1FUbzhEVXVkbEp2bDUmc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOC44MDc1OTQyOTkzMTY0MDYsLTkwLjgzNzUyNDQxNDA2MjV8bWFya2VyLTN8fDM5LjA5NjI0NDgxMjAxMTcyLC05NC41NjYwMjQ3ODAyNzM0NHxtYXJrZXItNHx8JmNlbnRlcj0zOC45NTE5MTk1NTU2NjQwNiwtOTIuNzAxNzc0NTk3MTY3OTcmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MyZyYW5kPS0xODkwOTc0MTg2JnNlc3Npb249NjI2ODQwNzYtMDA1NS02NzUwLTAyYjQtMzU2OC0wYTUzNTA3ZDhiM2IiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjExNTIsInRpbWUiOjExMDAyLCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfbWVyZ2VfbGVmdF9zbS5naWYiLCJkaXJlY3Rpb24iOjd9LHsiZGlzdGFuY2UiOjMuOTUxLCJzdHJlZXRzIjpbIkktNjcwIFciXSwibmFycmF0aXZlIjoiVGFrZSBJLTY3MCBXIHRvd2FyZCBXaWNoaXRhL1RvcGVrYS9JLTM1IFMgKENyb3NzaW5nIGludG8gS2Fuc2FzKS4iLCJ0dXJuVHlwZSI6MCwic3RhcnRQb2ludCI6eyJsbmciOi05NC41NjYwMjUsImxhdCI6MzkuMDk2MjQ1fSwiaW5kZXgiOjMsImZvcm1hdHRlZFRpbWUiOiIwMDowNDo0OSIsImRpcmVjdGlvbk5hbWUiOiJXZXN0IiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W3siZXh0cmFUZXh0IjoiIiwidGV4dCI6IjY3MCIsInR5cGUiOjEsInVybCI6Imh0dHA6Ly9pY29ucy5tcWNkbi5jb20vaWNvbnMvcnMxLnBuZz9uPTY3MCZkPVdFU1QiLCJkaXJlY3Rpb24iOjd9XSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9ZEFGUGV0dHhibHVCMkhETmpKU1FUbzhEVXVkbEp2bDUmc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOS4wOTYyNDQ4MTIwMTE3MiwtOTQuNTY2MDI0NzgwMjczNDR8bWFya2VyLTR8fDM5LjA5MTkzMDM4OTQwNDMsLTk0LjYzMjUwNzMyNDIxODc1fG1hcmtlci01fHwmY2VudGVyPTM5LjA5NDA4NzYwMDcwODAxLC05NC41OTkyNjYwNTIyNDYxJmRlZmF1bHRNYXJrZXI9bm9uZSZ6b29tPTgmcmFuZD0tMTg5MDk3NDE4NiZzZXNzaW9uPTYyNjg0MDc2LTAwNTUtNjc1MC0wMmI0LTM1NjgtMGE1MzUwN2Q4YjNiIiwidHJhbnNwb3J0TW9kZSI6IkFVVE8iLCJhdHRyaWJ1dGVzIjozMjAwLCJ0aW1lIjoyODksImljb25VcmwiOiJodHRwOi8vY29udGVudC5tcWNkbi5jb20vbXFzaXRlL3R1cm5zaWducy9yc19zdHJhaWdodF9zbS5naWYiLCJkaXJlY3Rpb24iOjd9LHsiZGlzdGFuY2UiOjU5Ni4wNzksInN0cmVldHMiOlsiSS03MCBXIl0sIm5hcnJhdGl2ZSI6IkktNjcwIFcgYmVjb21lcyBJLTcwIFcgKFBvcnRpb25zIHRvbGwpIChDcm9zc2luZyBpbnRvIENvbG9yYWRvKS4iLCJ0dXJuVHlwZSI6MCwic3RhcnRQb2ludCI6eyJsbmciOi05NC42MzI1MDcsImxhdCI6MzkuMDkxOTN9LCJpbmRleCI6NCwiZm9ybWF0dGVkVGltZSI6IjA4OjA4OjU0IiwiZGlyZWN0aW9uTmFtZSI6Ildlc3QiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbeyJleHRyYVRleHQiOiIiLCJ0ZXh0IjoiNzAiLCJ0eXBlIjoxLCJ1cmwiOiJodHRwOi8vaWNvbnMubXFjZG4uY29tL2ljb25zL3JzMS5wbmc/bj03MCZkPVdFU1QiLCJkaXJlY3Rpb24iOjd9XSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9ZEFGUGV0dHhibHVCMkhETmpKU1FUbzhEVXVkbEp2bDUmc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOS4wOTE5MzAzODk0MDQzLC05NC42MzI1MDczMjQyMTg3NXxtYXJrZXItNXx8MzkuNzc5NzA1MDQ3NjA3NDIsLTEwNC45NzYxMDQ3MzYzMjgxMnxtYXJrZXItNnx8JmNlbnRlcj0zOS40MzU4MTc3MTg1MDU4NiwtOTkuODA0MzA2MDMwMjczNDQmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MiZyYW5kPS0xODkwOTc0MTg2JnNlc3Npb249NjI2ODQwNzYtMDA1NS02NzUwLTAyYjQtMzU2OC0wYTUzNTA3ZDhiM2IiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjMyMDEsInRpbWUiOjI5MzM0LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfc3RyYWlnaHRfc20uZ2lmIiwiZGlyZWN0aW9uIjo3fSx7ImRpc3RhbmNlIjowLjQ4Nywic3RyZWV0cyI6W10sIm5hcnJhdGl2ZSI6IlRha2UgdGhlIEktMjUgZXhpdCwgRVhJVCAyNzQsIHRvd2FyZCBDb2xvIFNwcmluZ3MvRm9ydCBDb2xsaW5zLiIsInR1cm5UeXBlIjoxNCwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuOTc2MTA1LCJsYXQiOjM5Ljc3OTcwNX0sImluZGV4Ijo1LCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6NDAiLCJkaXJlY3Rpb25OYW1lIjoiV2VzdCIsIm1hbmV1dmVyTm90ZXMiOltdLCJsaW5rSWRzIjpbXSwic2lnbnMiOlt7ImV4dHJhVGV4dCI6IiIsInRleHQiOiIyNzQiLCJ0eXBlIjoxMDAxLCJ1cmwiOiJodHRwOi8vaWNvbnMubXFjZG4uY29tL2ljb25zL3JzMTAwMS5wbmc/bj0yNzQmZD1SSUdIVCIsImRpcmVjdGlvbiI6MH1dLCJtYXBVcmwiOiJodHRwOi8vd3d3Lm1hcHF1ZXN0YXBpLmNvbS9zdGF0aWNtYXAvdjUvbWFwP2tleT1kQUZQZXR0eGJsdUIySEROakpTUVRvOERVdWRsSnZsNSZzaXplPTIyNSwxNjAmbG9jYXRpb25zPTM5Ljc3OTcwNTA0NzYwNzQyLC0xMDQuOTc2MTA0NzM2MzI4MTJ8bWFya2VyLTZ8fDM5Ljc4MDAyMTY2NzQ4MDQ3LC0xMDQuOTg1MjI5NDkyMTg3NXxtYXJrZXItN3x8JmNlbnRlcj0zOS43Nzk4NjMzNTc1NDM5NDUsLTEwNC45ODA2NjcxMTQyNTc4MSZkZWZhdWx0TWFya2VyPW5vbmUmem9vbT0xMSZyYW5kPS0xODkwOTc0MTg2JnNlc3Npb249NjI2ODQwNzYtMDA1NS02NzUwLTAyYjQtMzU2OC0wYTUzNTA3ZDhiM2IiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjEwMjQsInRpbWUiOjQwLCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfZ3JfZXhpdHJpZ2h0X3NtLmdpZiIsImRpcmVjdGlvbiI6N30seyJkaXN0YW5jZSI6MC4xNzcsInN0cmVldHMiOltdLCJuYXJyYXRpdmUiOiJLZWVwIGxlZnQgdG8gdGFrZSB0aGUgSS0yNSBTIHJhbXAgdG93YXJkIENvbG8gU3Bncy9QZWNvcyBTdC9JLTcwIFcuIiwidHVyblR5cGUiOjEzLCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC45ODUyMjksImxhdCI6MzkuNzgwMDIyfSwiaW5kZXgiOjYsImZvcm1hdHRlZFRpbWUiOiIwMDowMDoxNSIsImRpcmVjdGlvbk5hbWUiOiJXZXN0IiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W10sIm1hcFVybCI6Imh0dHA6Ly93d3cubWFwcXVlc3RhcGkuY29tL3N0YXRpY21hcC92NS9tYXA/a2V5PWRBRlBldHR4Ymx1QjJIRE5qSlNRVG84RFV1ZGxKdmw1JnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzkuNzgwMDIxNjY3NDgwNDcsLTEwNC45ODUyMjk0OTIxODc1fG1hcmtlci03fHwzOS43ODA3MjczODY0NzQ2MSwtMTA0Ljk4ODM2NTE3MzMzOTg0fG1hcmtlci04fHwmY2VudGVyPTM5Ljc4MDM3NDUyNjk3NzU0LC0xMDQuOTg2Nzk3MzMyNzYzNjcmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MTMmcmFuZD0tMTg5MDk3NDE4NiZzZXNzaW9uPTYyNjg0MDc2LTAwNTUtNjc1MC0wMmI0LTM1NjgtMGE1MzUwN2Q4YjNiIiwidHJhbnNwb3J0TW9kZSI6IkFVVE8iLCJhdHRyaWJ1dGVzIjoxMDI0LCJ0aW1lIjoxNSwiaWNvblVybCI6Imh0dHA6Ly9jb250ZW50Lm1xY2RuLmNvbS9tcXNpdGUvdHVybnNpZ25zL3JzX3JhbXBfc20uZ2lmIiwiZGlyZWN0aW9uIjo3fSx7ImRpc3RhbmNlIjowLjUyLCJzdHJlZXRzIjpbXSwibmFycmF0aXZlIjoiS2VlcCBsZWZ0IGF0IHRoZSBmb3JrIGluIHRoZSByYW1wLiIsInR1cm5UeXBlIjoxNywic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuOTg4MzY1LCJsYXQiOjM5Ljc4MDcyN30sImluZGV4Ijo3LCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6NDUiLCJkaXJlY3Rpb25OYW1lIjoiU291dGgiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbXSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9ZEFGUGV0dHhibHVCMkhETmpKU1FUbzhEVXVkbEp2bDUmc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOS43ODA3MjczODY0NzQ2MSwtMTA0Ljk4ODM2NTE3MzMzOTg0fG1hcmtlci04fHwzOS43NzQ1NjI4MzU2OTMzNiwtMTA0Ljk5MDIzNDM3NXxtYXJrZXItOXx8JmNlbnRlcj0zOS43Nzc2NDUxMTEwODM5ODQsLTEwNC45ODkyOTk3NzQxNjk5MiZkZWZhdWx0TWFya2VyPW5vbmUmem9vbT0xMCZyYW5kPS0xODkwOTc0MTg2JnNlc3Npb249NjI2ODQwNzYtMDA1NS02NzUwLTAyYjQtMzU2OC0wYTUzNTA3ZDhiM2IiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjAsInRpbWUiOjQ1LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfZm9ya19sZWZ0Ml9zbS5naWYiLCJkaXJlY3Rpb24iOjR9LHsiZGlzdGFuY2UiOjAuMTI2LCJzdHJlZXRzIjpbXSwibmFycmF0aXZlIjoiS2VlcCByaWdodCBhdCB0aGUgZm9yayBpbiB0aGUgcmFtcC4iLCJ0dXJuVHlwZSI6MTYsInN0YXJ0UG9pbnQiOnsibG5nIjotMTA0Ljk5MDIzNCwibGF0IjozOS43NzQ1NjN9LCJpbmRleCI6OCwiZm9ybWF0dGVkVGltZSI6IjAwOjAwOjEyIiwiZGlyZWN0aW9uTmFtZSI6IlNvdXRoIiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W10sIm1hcFVybCI6Imh0dHA6Ly93d3cubWFwcXVlc3RhcGkuY29tL3N0YXRpY21hcC92NS9tYXA/a2V5PWRBRlBldHR4Ymx1QjJIRE5qSlNRVG84RFV1ZGxKdmw1JnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzkuNzc0NTYyODM1NjkzMzYsLTEwNC45OTAyMzQzNzV8bWFya2VyLTl8fDM5Ljc3Mjc2MjI5ODU4Mzk4NCwtMTA0Ljk5MDUzOTU1MDc4MTI1fG1hcmtlci0xMHx8JmNlbnRlcj0zOS43NzM2NjI1NjcxMzg2NywtMTA0Ljk5MDM4Njk2Mjg5MDYyJmRlZmF1bHRNYXJrZXI9bm9uZSZ6b29tPTEyJnJhbmQ9LTE4OTA5NzQxODYmc2Vzc2lvbj02MjY4NDA3Ni0wMDU1LTY3NTAtMDJiNC0zNTY4LTBhNTM1MDdkOGIzYiIsInRyYW5zcG9ydE1vZGUiOiJBVVRPIiwiYXR0cmlidXRlcyI6MCwidGltZSI6MTIsImljb25VcmwiOiJodHRwOi8vY29udGVudC5tcWNkbi5jb20vbXFzaXRlL3R1cm5zaWducy9yc19mb3JrX3JpZ2h0Ml9zbS5naWYiLCJkaXJlY3Rpb24iOjR9LHsiZGlzdGFuY2UiOjEuMTg1LCJzdHJlZXRzIjpbIlBhcmsgQXZlIl0sIm5hcnJhdGl2ZSI6Ik1lcmdlIG9udG8gUGFyayBBdmUgdG93YXJkIERvd250b3duLiIsInR1cm5UeXBlIjoxMCwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuOTkwNTQsImxhdCI6MzkuNzcyNzYyfSwiaW5kZXgiOjksImZvcm1hdHRlZFRpbWUiOiIwMDowMjowNCIsImRpcmVjdGlvbk5hbWUiOiJTb3V0aHdlc3QiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbXSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9ZEFGUGV0dHhibHVCMkhETmpKU1FUbzhEVXVkbEp2bDUmc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOS43NzI3NjIyOTg1ODM5ODQsLTEwNC45OTA1Mzk1NTA3ODEyNXxtYXJrZXItMTB8fDM5Ljc1NzA2MTAwNDYzODY3LC0xMDQuOTkyOTA0NjYzMDg1OTR8bWFya2VyLTExfHwmY2VudGVyPTM5Ljc2NDkxMTY1MTYxMTMzLC0xMDQuOTkxNzIyMTA2OTMzNiZkZWZhdWx0TWFya2VyPW5vbmUmem9vbT05JnJhbmQ9LTE4OTA5NzQxODYmc2Vzc2lvbj02MjY4NDA3Ni0wMDU1LTY3NTAtMDJiNC0zNTY4LTBhNTM1MDdkOGIzYiIsInRyYW5zcG9ydE1vZGUiOiJBVVRPIiwiYXR0cmlidXRlcyI6MTAyNCwidGltZSI6MTI0LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfbWVyZ2VfcmlnaHRfc20uZ2lmIiwiZGlyZWN0aW9uIjo2fSx7ImRpc3RhbmNlIjowLjQyMywic3RyZWV0cyI6WyIyMm5kIFN0Il0sIm5hcnJhdGl2ZSI6IlBhcmsgQXZlIGJlY29tZXMgMjJuZCBTdC4iLCJ0dXJuVHlwZSI6MCwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuOTkyOTA1LCJsYXQiOjM5Ljc1NzA2MX0sImluZGV4IjoxMCwiZm9ybWF0dGVkVGltZSI6IjAwOjAxOjE3IiwiZGlyZWN0aW9uTmFtZSI6IlNvdXRoZWFzdCIsIm1hbmV1dmVyTm90ZXMiOltdLCJsaW5rSWRzIjpbXSwic2lnbnMiOltdLCJtYXBVcmwiOiJodHRwOi8vd3d3Lm1hcHF1ZXN0YXBpLmNvbS9zdGF0aWNtYXAvdjUvbWFwP2tleT1kQUZQZXR0eGJsdUIySEROakpTUVRvOERVdWRsSnZsNSZzaXplPTIyNSwxNjAmbG9jYXRpb25zPTM5Ljc1NzA2MTAwNDYzODY3LC0xMDQuOTkyOTA0NjYzMDg1OTR8bWFya2VyLTExfHwzOS43NTI2NDczOTk5MDIzNDQsLTEwNC45ODc0MTE0OTkwMjM0NHxtYXJrZXItMTJ8fCZjZW50ZXI9MzkuNzU0ODU0MjAyMjcwNTEsLTEwNC45OTAxNTgwODEwNTQ2OSZkZWZhdWx0TWFya2VyPW5vbmUmem9vbT0xMSZyYW5kPS0xODkwOTc0MTg2JnNlc3Npb249NjI2ODQwNzYtMDA1NS02NzUwLTAyYjQtMzU2OC0wYTUzNTA3ZDhiM2IiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjAsInRpbWUiOjc3LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfc3RyYWlnaHRfc20uZ2lmIiwiZGlyZWN0aW9uIjo1fSx7ImRpc3RhbmNlIjowLjk4LCJzdHJlZXRzIjpbIk4gQnJvYWR3YXkiXSwibmFycmF0aXZlIjoiVHVybiBzbGlnaHQgcmlnaHQgb250byBOIEJyb2Fkd2F5LiIsInR1cm5UeXBlIjoxLCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC45ODc0MTEsImxhdCI6MzkuNzUyNjQ3fSwiaW5kZXgiOjExLCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDI6NDQiLCJkaXJlY3Rpb25OYW1lIjoiU291dGgiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbXSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9ZEFGUGV0dHhibHVCMkhETmpKU1FUbzhEVXVkbEp2bDUmc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOS43NTI2NDczOTk5MDIzNDQsLTEwNC45ODc0MTE0OTkwMjM0NHxtYXJrZXItMTJ8fDM5LjczODQ3MTk4NDg2MzI4LC0xMDQuOTg3MzczMzUyMDUwNzh8bWFya2VyLTEzfHwmY2VudGVyPTM5Ljc0NTU1OTY5MjM4MjgxLC0xMDQuOTg3MzkyNDI1NTM3MTEmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209OSZyYW5kPS0xODkwOTc0MTg2JnNlc3Npb249NjI2ODQwNzYtMDA1NS02NzUwLTAyYjQtMzU2OC0wYTUzNTA3ZDhiM2IiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjAsInRpbWUiOjE2NCwiaWNvblVybCI6Imh0dHA6Ly9jb250ZW50Lm1xY2RuLmNvbS9tcXNpdGUvdHVybnNpZ25zL3JzX3NsaWdodF9yaWdodF9zbS5naWYiLCJkaXJlY3Rpb24iOjR9LHsiZGlzdGFuY2UiOjAuMTM0LCJzdHJlZXRzIjpbIkUgMTR0aCBBdmUiXSwibmFycmF0aXZlIjoiVHVybiBsZWZ0IG9udG8gRSAxNHRoIEF2ZS4iLCJ0dXJuVHlwZSI6Niwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuOTg3MzczLCJsYXQiOjM5LjczODQ3Mn0sImluZGV4IjoxMiwiZm9ybWF0dGVkVGltZSI6IjAwOjAwOjIwIiwiZGlyZWN0aW9uTmFtZSI6IkVhc3QiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbXSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9ZEFGUGV0dHhibHVCMkhETmpKU1FUbzhEVXVkbEp2bDUmc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOS43Mzg0NzE5ODQ4NjMyOCwtMTA0Ljk4NzM3MzM1MjA1MDc4fG1hcmtlci0xM3x8MzkuNzM4NDUyOTExMzc2OTUsLTEwNC45ODQ4NTU2NTE4NTU0N3xtYXJrZXItMTR8fCZjZW50ZXI9MzkuNzM4NDYyNDQ4MTIwMTIsLTEwNC45ODYxMTQ1MDE5NTMxMiZkZWZhdWx0TWFya2VyPW5vbmUmem9vbT0xMyZyYW5kPS0xODkwOTc0MTg2JnNlc3Npb249NjI2ODQwNzYtMDA1NS02NzUwLTAyYjQtMzU2OC0wYTUzNTA3ZDhiM2IiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjAsInRpbWUiOjIwLCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfbGVmdF9zbS5naWYiLCJkaXJlY3Rpb24iOjh9LHsiZGlzdGFuY2UiOjAsInN0cmVldHMiOltdLCJuYXJyYXRpdmUiOiJXZWxjb21lIHRvIERFTlZFUiwgQ08uIiwidHVyblR5cGUiOi0xLCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC45ODQ4NTYsImxhdCI6MzkuNzM4NDUzfSwiaW5kZXgiOjEzLCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6MDAiLCJkaXJlY3Rpb25OYW1lIjoiIiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W10sInRyYW5zcG9ydE1vZGUiOiJBVVRPIiwiYXR0cmlidXRlcyI6MCwidGltZSI6MCwiaWNvblVybCI6Imh0dHA6Ly9jb250ZW50Lm1xY2RuLmNvbS9tcXNpdGUvdHVybnNpZ25zL2ljb24tZGlycy1lbmRfc20uZ2lmIiwiZGlyZWN0aW9uIjowfV0sImhhc0ZlcnJ5IjpmYWxzZX1dLCJvcHRpb25zIjp7ImFydGVyeVdlaWdodHMiOltdLCJjeWNsaW5nUm9hZEZhY3RvciI6MSwidGltZVR5cGUiOjAsInVzZVRyYWZmaWMiOmZhbHNlLCJyZXR1cm5MaW5rRGlyZWN0aW9ucyI6ZmFsc2UsImNvdW50cnlCb3VuZGFyeURpc3BsYXkiOnRydWUsImVuaGFuY2VkTmFycmF0aXZlIjpmYWxzZSwibG9jYWxlIjoiZW5fVVMiLCJ0cnlBdm9pZExpbmtJZHMiOltdLCJkcml2aW5nU3R5bGUiOjIsImRvUmV2ZXJzZUdlb2NvZGUiOnRydWUsImdlbmVyYWxpemUiOi0xLCJtdXN0QXZvaWRMaW5rSWRzIjpbXSwic2lkZU9mU3RyZWV0RGlzcGxheSI6dHJ1ZSwicm91dGVUeXBlIjoiRkFTVEVTVCIsImF2b2lkVGltZWRDb25kaXRpb25zIjpmYWxzZSwicm91dGVOdW1iZXIiOjAsInNoYXBlRm9ybWF0IjoicmF3IiwibWF4V2Fsa2luZ0Rpc3RhbmNlIjotMSwiZGVzdGluYXRpb25NYW5ldXZlckRpc3BsYXkiOnRydWUsInRyYW5zZmVyUGVuYWx0eSI6LTEsIm5hcnJhdGl2ZVR5cGUiOiJ0ZXh0Iiwid2Fsa2luZ1NwZWVkIjotMSwidXJiYW5Bdm9pZEZhY3RvciI6LTEsInN0YXRlQm91bmRhcnlEaXNwbGF5Ijp0cnVlLCJ1bml0IjoiTSIsImhpZ2h3YXlFZmZpY2llbmN5IjoyMiwibWF4TGlua0lkIjowLCJtYW5ldXZlclBlbmFsdHkiOi0xLCJhdm9pZFRyaXBJZHMiOltdLCJmaWx0ZXJab25lRmFjdG9yIjotMSwibWFubWFwcyI6InRydWUifSwibG9jYXRpb25zIjpbeyJkcmFnUG9pbnQiOmZhbHNlLCJkaXNwbGF5TGF0TG5nIjp7ImxuZyI6LTkwLjIwMDMxLCJsYXQiOjM4LjYzMDI3Nn0sImFkbWluQXJlYTQiOiJTdC4gTG91aXMgQ291bnR5IiwiYWRtaW5BcmVhNSI6IlN0IExvdWlzIiwicG9zdGFsQ29kZSI6IiIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTMiOiJNTyIsInR5cGUiOiJzIiwic2lkZU9mU3RyZWV0IjoiTiIsImdlb2NvZGVRdWFsaXR5Q29kZSI6IkE1WEFYIiwiYWRtaW5BcmVhNFR5cGUiOiJDb3VudHkiLCJsaW5rSWQiOjEyMDk0MjQ4LCJzdHJlZXQiOiIiLCJhZG1pbkFyZWE1VHlwZSI6IkNpdHkiLCJnZW9jb2RlUXVhbGl0eSI6IkNJVFkiLCJhZG1pbkFyZWExVHlwZSI6IkNvdW50cnkiLCJhZG1pbkFyZWEzVHlwZSI6IlN0YXRlIiwibGF0TG5nIjp7ImxuZyI6LTkwLjIwMDMwOSwibGF0IjozOC42MzAyNzZ9fSx7ImRyYWdQb2ludCI6ZmFsc2UsImRpc3BsYXlMYXRMbmciOnsibG5nIjotMTA0Ljk4NDg1NiwibGF0IjozOS43Mzg0NTN9LCJhZG1pbkFyZWE0IjoiRGVudmVyIENvdW50eSIsImFkbWluQXJlYTUiOiJEZW52ZXIiLCJwb3N0YWxDb2RlIjoiIiwiYWRtaW5BcmVhMSI6IlVTIiwiYWRtaW5BcmVhMyI6IkNPIiwidHlwZSI6InMiLCJzaWRlT2ZTdHJlZXQiOiJOIiwiZ2VvY29kZVF1YWxpdHlDb2RlIjoiQTVYQVgiLCJhZG1pbkFyZWE0VHlwZSI6IkNvdW50eSIsImxpbmtJZCI6NDI0MDkzNTEsInN0cmVldCI6IiIsImFkbWluQXJlYTVUeXBlIjoiQ2l0eSIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsImFkbWluQXJlYTNUeXBlIjoiU3RhdGUiLCJsYXRMbmciOnsibG5nIjotMTA0Ljk4NDg1MywibGF0IjozOS43Mzg0NTN9fV0sInRpbWUiOjQzNTc5LCJoYXNVbnBhdmVkIjpmYWxzZSwibG9jYXRpb25TZXF1ZW5jZSI6WzAsMV0sImhhc0ZlcnJ5IjpmYWxzZX0sImluZm8iOnsic3RhdHVzY29kZSI6MCwiY29weXJpZ2h0Ijp7ImltYWdlQWx0VGV4dCI6IsKpIDIwMjIgTWFwUXVlc3QsIEluYy4iLCJpbWFnZVVybCI6Imh0dHA6Ly9hcGkubXFjZG4uY29tL3Jlcy9tcWxvZ28uZ2lmIiwidGV4dCI6IsKpIDIwMjIgTWFwUXVlc3QsIEluYy4ifSwibWVzc2FnZXMiOltdfX0=
+  recorded_at: Tue, 26 Apr 2022 18:56:54 GMT
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=dAFPettxbluB2HDNjJSQTo8DUudlJvl5&location=denver,%20co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 26 Apr 2022 18:56:54 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1733'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Tue, 26 Apr 2022 18:56:54 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=E960A0CCFFF221D8A4C399677F804284; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,
+        co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=dAFPettxbluB2HDNjJSQTo8DUudlJvl5&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=973660454"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=dAFPettxbluB2HDNjJSQTo8DUudlJvl5&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=857980679"}]}]}'
+  recorded_at: Tue, 26 Apr 2022 18:56:54 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=<openweather_key>&exclude=minutely,alerts&lat=39.738453&lon=-104.984853&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 26 Apr 2022 18:56:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '17667'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?exclude=minutely%2Calerts&lat=39.74&lon=-104.98&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":39.7385,"lon":-104.9849,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1650999414,"sunrise":1650974798,"sunset":1651024110,"temp":70,"feels_like":67.32,"pressure":1015,"humidity":13,"dew_point":18.63,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":5.99,"wind_deg":112,"wind_gust":11.99,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},"hourly":[{"dt":1650996000,"temp":69.1,"feels_like":66.27,"pressure":1015,"humidity":12,"dew_point":16.34,"uvi":0,"clouds":89,"visibility":10000,"wind_speed":7.07,"wind_deg":134,"wind_gust":9.51,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1650999600,"temp":70,"feels_like":67.32,"pressure":1015,"humidity":13,"dew_point":18.63,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":6.08,"wind_deg":124,"wind_gust":8.84,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651003200,"temp":70.52,"feels_like":67.84,"pressure":1014,"humidity":12,"dew_point":17.33,"uvi":0,"clouds":95,"visibility":10000,"wind_speed":1.88,"wind_deg":68,"wind_gust":5.5,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651006800,"temp":71.01,"feels_like":68.32,"pressure":1013,"humidity":11,"dew_point":15.89,"uvi":0,"clouds":93,"visibility":10000,"wind_speed":5.75,"wind_deg":351,"wind_gust":7.36,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651010400,"temp":71.33,"feels_like":68.63,"pressure":1011,"humidity":10,"dew_point":14.18,"uvi":0,"clouds":92,"visibility":10000,"wind_speed":5.95,"wind_deg":314,"wind_gust":11.27,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651014000,"temp":71.37,"feels_like":68.72,"pressure":1009,"humidity":11,"dew_point":16.14,"uvi":0,"clouds":91,"visibility":10000,"wind_speed":4.79,"wind_deg":271,"wind_gust":15.73,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651017600,"temp":72.27,"feels_like":69.71,"pressure":1008,"humidity":11,"dew_point":14.38,"uvi":0,"clouds":91,"visibility":10000,"wind_speed":8.55,"wind_deg":286,"wind_gust":16.82,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651021200,"temp":70.29,"feels_like":67.59,"pressure":1008,"humidity":12,"dew_point":15.4,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":9.53,"wind_deg":311,"wind_gust":13.78,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651024800,"temp":67.3,"feels_like":64.44,"pressure":1009,"humidity":15,"dew_point":17.6,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":4.85,"wind_deg":6,"wind_gust":7.74,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651028400,"temp":64.54,"feels_like":61.5,"pressure":1010,"humidity":17,"dew_point":19.26,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":4.52,"wind_deg":70,"wind_gust":7.34,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651032000,"temp":62.53,"feels_like":59.38,"pressure":1010,"humidity":19,"dew_point":19.71,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":2.93,"wind_deg":141,"wind_gust":3.51,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651035600,"temp":60.6,"feels_like":57.31,"pressure":1010,"humidity":20,"dew_point":19.62,"uvi":0,"clouds":88,"visibility":10000,"wind_speed":3.22,"wind_deg":198,"wind_gust":3.83,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651039200,"temp":58.62,"feels_like":55.31,"pressure":1010,"humidity":24,"dew_point":21.58,"uvi":0,"clouds":90,"visibility":10000,"wind_speed":5.77,"wind_deg":213,"wind_gust":9.78,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651042800,"temp":56.86,"feels_like":53.47,"pressure":1010,"humidity":26,"dew_point":22.57,"uvi":0,"clouds":81,"visibility":10000,"wind_speed":4.18,"wind_deg":236,"wind_gust":7.4,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1651046400,"temp":55.92,"feels_like":52.48,"pressure":1010,"humidity":27,"dew_point":22.59,"uvi":0,"clouds":90,"visibility":10000,"wind_speed":3.69,"wind_deg":251,"wind_gust":5.77,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651050000,"temp":55.4,"feels_like":51.91,"pressure":1010,"humidity":27,"dew_point":22.01,"uvi":0,"clouds":94,"visibility":10000,"wind_speed":3.78,"wind_deg":221,"wind_gust":4.36,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651053600,"temp":54.88,"feels_like":51.33,"pressure":1010,"humidity":27,"dew_point":21.7,"uvi":0,"clouds":95,"visibility":10000,"wind_speed":2.82,"wind_deg":241,"wind_gust":3.02,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651057200,"temp":53.94,"feels_like":50.36,"pressure":1010,"humidity":28,"dew_point":21.06,"uvi":0,"clouds":96,"visibility":10000,"wind_speed":2.55,"wind_deg":240,"wind_gust":2.73,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651060800,"temp":53.29,"feels_like":49.64,"pressure":1010,"humidity":28,"dew_point":20.57,"uvi":0,"clouds":97,"visibility":10000,"wind_speed":1.32,"wind_deg":281,"wind_gust":2.19,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651064400,"temp":54.07,"feels_like":50.45,"pressure":1011,"humidity":27,"dew_point":20.93,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":1.21,"wind_deg":275,"wind_gust":1.54,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651068000,"temp":56.26,"feels_like":52.77,"pressure":1011,"humidity":25,"dew_point":21.02,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":1.14,"wind_deg":240,"wind_gust":1.61,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651071600,"temp":58.44,"feels_like":55.08,"pressure":1010,"humidity":23,"dew_point":20.73,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":1.45,"wind_deg":220,"wind_gust":2.3,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651075200,"temp":61.84,"feels_like":58.68,"pressure":1009,"humidity":20,"dew_point":20.3,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":0.29,"wind_deg":55,"wind_gust":1.48,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651078800,"temp":67.33,"feels_like":64.53,"pressure":1008,"humidity":16,"dew_point":19.29,"uvi":0,"clouds":83,"visibility":10000,"wind_speed":2.93,"wind_deg":49,"wind_gust":2.51,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0},{"dt":1651082400,"temp":71.8,"feels_like":69.3,"pressure":1005,"humidity":13,"dew_point":17.6,"uvi":0,"clouds":76,"visibility":10000,"wind_speed":4.56,"wind_deg":36,"wind_gust":4.23,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0},{"dt":1651086000,"temp":73.26,"feels_like":70.84,"pressure":1004,"humidity":12,"dew_point":17.33,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":6.31,"wind_deg":23,"wind_gust":8.9,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651089600,"temp":73.35,"feels_like":70.99,"pressure":1003,"humidity":13,"dew_point":20.16,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":7.76,"wind_deg":45,"wind_gust":10.47,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0.04},{"dt":1651093200,"temp":70.59,"feels_like":68.29,"pressure":1004,"humidity":20,"dew_point":26.56,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":15.46,"wind_deg":155,"wind_gust":12.15,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0.12},{"dt":1651096800,"temp":64.45,"feels_like":62.2,"pressure":1006,"humidity":34,"dew_point":35.42,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":13.6,"wind_deg":120,"wind_gust":15.73,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.36,"rain":{"1h":0.16}},{"dt":1651100400,"temp":65.39,"feels_like":63.03,"pressure":1004,"humidity":30,"dew_point":33.03,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":10.69,"wind_deg":90,"wind_gust":9.86,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0.12},{"dt":1651104000,"temp":68.29,"feels_like":65.98,"pressure":1003,"humidity":25,"dew_point":30.87,"uvi":0,"clouds":86,"visibility":10000,"wind_speed":6.91,"wind_deg":97,"wind_gust":6.78,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0.12},{"dt":1651107600,"temp":67.5,"feels_like":65.12,"pressure":1004,"humidity":25,"dew_point":30.38,"uvi":0,"clouds":36,"visibility":10000,"wind_speed":4.63,"wind_deg":115,"wind_gust":7.05,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1651111200,"temp":65.61,"feels_like":63.09,"pressure":1004,"humidity":26,"dew_point":29.66,"uvi":0,"clouds":67,"visibility":10000,"wind_speed":3.4,"wind_deg":178,"wind_gust":7.38,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1651114800,"temp":62.69,"feels_like":60.03,"pressure":1005,"humidity":29,"dew_point":29.97,"uvi":0,"clouds":47,"visibility":10000,"wind_speed":1.57,"wind_deg":333,"wind_gust":4.23,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1651118400,"temp":60.4,"feels_like":57.7,"pressure":1006,"humidity":33,"dew_point":31.06,"uvi":0,"clouds":36,"visibility":10000,"wind_speed":2.86,"wind_deg":326,"wind_gust":5.79,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1651122000,"temp":58.73,"feels_like":55.99,"pressure":1007,"humidity":36,"dew_point":31.5,"uvi":0,"clouds":30,"visibility":10000,"wind_speed":2.66,"wind_deg":316,"wind_gust":5.32,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1651125600,"temp":57.83,"feels_like":55,"pressure":1007,"humidity":36,"dew_point":30.78,"uvi":0,"clouds":27,"visibility":10000,"wind_speed":2.98,"wind_deg":252,"wind_gust":3.11,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1651129200,"temp":56.93,"feels_like":53.92,"pressure":1007,"humidity":34,"dew_point":28.8,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":4.59,"wind_deg":216,"wind_gust":5.06,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651132800,"temp":55.85,"feels_like":52.65,"pressure":1006,"humidity":32,"dew_point":26.13,"uvi":0,"clouds":91,"visibility":10000,"wind_speed":3.58,"wind_deg":216,"wind_gust":4,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651136400,"temp":55,"feels_like":51.66,"pressure":1006,"humidity":31,"dew_point":24.51,"uvi":0,"clouds":94,"visibility":10000,"wind_speed":2.95,"wind_deg":224,"wind_gust":3.2,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651140000,"temp":54.43,"feels_like":50.97,"pressure":1007,"humidity":30,"dew_point":23.22,"uvi":0,"clouds":95,"visibility":10000,"wind_speed":2.53,"wind_deg":270,"wind_gust":3.36,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651143600,"temp":53.62,"feels_like":50.04,"pressure":1007,"humidity":29,"dew_point":21.96,"uvi":0,"clouds":96,"visibility":10000,"wind_speed":2.91,"wind_deg":342,"wind_gust":4.41,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651147200,"temp":52.59,"feels_like":48.96,"pressure":1008,"humidity":30,"dew_point":21.31,"uvi":0,"clouds":97,"visibility":10000,"wind_speed":1.1,"wind_deg":335,"wind_gust":1.59,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1651150800,"temp":53.76,"feels_like":50.2,"pressure":1008,"humidity":29,"dew_point":21.51,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":1.61,"wind_deg":239,"wind_gust":1.77,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651154400,"temp":56.73,"feels_like":53.28,"pressure":1008,"humidity":25,"dew_point":21.16,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":1.07,"wind_deg":243,"wind_gust":1.77,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651158000,"temp":60.06,"feels_like":56.8,"pressure":1008,"humidity":22,"dew_point":21.18,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":0.36,"wind_deg":291,"wind_gust":1.21,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651161600,"temp":63.1,"feels_like":60.1,"pressure":1007,"humidity":21,"dew_point":22.5,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":1.3,"wind_deg":11,"wind_gust":1.41,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1651165200,"temp":66.02,"feels_like":63.27,"pressure":1007,"humidity":20,"dew_point":23.25,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":2.62,"wind_deg":77,"wind_gust":2.46,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0}],"daily":[{"dt":1650996000,"sunrise":1650974798,"sunset":1651024110,"moonrise":1650968820,"moonset":1651009320,"moon_phase":0.86,"temp":{"day":69.1,"min":43.52,"max":72.27,"night":60.6,"eve":72.27,"morn":43.52},"feels_like":{"day":66.27,"night":57.31,"eve":69.71,"morn":41.81},"pressure":1015,"humidity":12,"dew_point":16.34,"wind_speed":9.53,"wind_deg":311,"wind_gust":16.82,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":89,"pop":0,"uvi":0},{"dt":1651082400,"sunrise":1651061120,"sunset":1651110570,"moonrise":1651056720,"moonset":1651099680,"moon_phase":0.9,"temp":{"day":71.8,"min":53.29,"max":73.35,"night":58.73,"eve":68.29,"morn":53.29},"feels_like":{"day":69.3,"night":55.99,"eve":65.98,"morn":49.64},"pressure":1005,"humidity":13,"dew_point":17.6,"wind_speed":15.46,"wind_deg":155,"wind_gust":15.73,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":76,"pop":0.36,"rain":0.16,"uvi":0},{"dt":1651168800,"sunrise":1651147442,"sunset":1651197031,"moonrise":1651144560,"moonset":1651189920,"moon_phase":0.93,"temp":{"day":68.09,"min":52.59,"max":75.58,"night":60.6,"eve":70.97,"morn":52.59},"feels_like":{"day":65.44,"night":58.24,"eve":68.56,"morn":48.96},"pressure":1005,"humidity":18,"dew_point":22.35,"wind_speed":12.68,"wind_deg":285,"wind_gust":22.46,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":100,"pop":0.31,"uvi":0},{"dt":1651255200,"sunrise":1651233766,"sunset":1651283492,"moonrise":1651232340,"moonset":1651280160,"moon_phase":0.96,"temp":{"day":59.94,"min":51.82,"max":61.54,"night":51.82,"eve":55.4,"morn":53.44},"feels_like":{"day":56.25,"night":47.93,"eve":51.76,"morn":50.04},"pressure":1001,"humidity":13,"dew_point":8.62,"wind_speed":27.54,"wind_deg":283,"wind_gust":37.02,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":33,"pop":0.19,"uvi":0},{"dt":1651341600,"sunrise":1651320091,"sunset":1651369953,"moonrise":1651320180,"moonset":1651370340,"moon_phase":0,"temp":{"day":61.79,"min":47.16,"max":66.78,"night":56.19,"eve":66,"morn":47.16},"feels_like":{"day":58.42,"night":52.68,"eve":62.96,"morn":42.3},"pressure":1008,"humidity":16,"dew_point":15.06,"wind_speed":16.02,"wind_deg":326,"wind_gust":27.27,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0.07,"uvi":0},{"dt":1651428000,"sunrise":1651406417,"sunset":1651456414,"moonrise":1651408140,"moonset":1651460580,"moon_phase":0.03,"temp":{"day":58.77,"min":44.33,"max":64.45,"night":49.89,"eve":59.13,"morn":44.33},"feels_like":{"day":55.53,"night":46.47,"eve":56.57,"morn":42.44},"pressure":1005,"humidity":25,"dew_point":22.55,"wind_speed":8.84,"wind_deg":322,"wind_gust":9.33,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":84,"pop":0.56,"rain":2.08,"uvi":0},{"dt":1651514400,"sunrise":1651492745,"sunset":1651542875,"moonrise":1651496340,"moonset":1651550700,"moon_phase":0.06,"temp":{"day":58.48,"min":42.89,"max":71.87,"night":63.7,"eve":71.87,"morn":42.89},"feels_like":{"day":55.67,"night":60.94,"eve":69.51,"morn":41.14},"pressure":1008,"humidity":35,"dew_point":30.69,"wind_speed":11.21,"wind_deg":347,"wind_gust":18.3,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":26,"pop":0.71,"rain":0.96,"uvi":0},{"dt":1651600800,"sunrise":1651579073,"sunset":1651629335,"moonrise":1651584840,"moonset":1651640700,"moon_phase":0.09,"temp":{"day":63.54,"min":49.48,"max":70.66,"night":61.47,"eve":70.66,"morn":49.48},"feels_like":{"day":60.24,"night":58.5,"eve":68,"morn":44.04},"pressure":1014,"humidity":14,"dew_point":13.1,"wind_speed":18.81,"wind_deg":287,"wind_gust":45.66,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":4,"pop":0.08,"uvi":0}]}'
+  recorded_at: Tue, 26 Apr 2022 18:56:54 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?location=denver,%20co&open_now=true&term=tacos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Authorization:
+      - Bearer fCc7yH1YzNRLBhpqyvrH6NAkFGdgZtoGnNZYGe7Bm7573mZ7L3Y5YVlONV8px7Oky3zzBxzsdmpeW7Fwa3oNUdsjXcVkti-6liGmXNFy7IffmBbx2eCtw8vdouhlYnYx
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Routing-Service:
+      - routing-main--useast1-6df47595db-88tjz; site=public_api_v3
+      Ratelimit-Remaining:
+      - '4990'
+      Ratelimit-Resettime:
+      - '2022-04-27T00:00:00+00:00'
+      Server:
+      - envoy
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - '039dfe500678832b'
+      X-Cloudmap:
+      - routing_useast1
+      X-Proxied:
+      - 10-65-73-48-useast1aprod
+      X-Extlb:
+      - 10-65-73-48-useast1aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 26 Apr 2022 18:56:55 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-chi-kigq8000082-CHI
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "MtlvL-SAU6_1gDiRY6MAgw", "alias": "la-calle-taqueria-y-carnitas-denver",
+        "name": "La Calle Taqueria Y Carnitas", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/-djBaqchnqug4wtUSn5fIA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/la-calle-taqueria-y-carnitas-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 330, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 39.7114611, "longitude": -105.0102102},
+        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "1565 W Alameda Ave", "address2": "", "address3": "", "city": "Denver", "zip_code":
+        "80223", "country": "US", "state": "CO", "display_address": ["1565 W Alameda
+        Ave", "Denver, CO 80223"]}, "phone": "+17205836586", "display_phone": "(720)
+        583-6586", "distance": 4340.709859477461}, {"id": "JSBLdBfaAC9bUaQVJvKqYA",
+        "alias": "kik\u00e9s-red-tacos-denver", "name": "Kik\u00e9''s Red Tacos",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/X3KT8dk8I25GCkxIuJAysA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/kik%C3%A9s-red-tacos-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 67, "categories": [{"alias": "foodtrucks", "title": "Food
+        Trucks"}, {"alias": "mexican", "title": "Mexican"}], "rating": 4.5, "coordinates":
+        {"latitude": 39.7913786, "longitude": -105.0249751}, "transactions": [], "price":
+        "$$", "location": {"address1": "5226 Federal Blvd", "address2": null, "address3":
+        null, "city": "Denver", "zip_code": "80221", "country": "US", "state": "CO",
+        "display_address": ["5226 Federal Blvd", "Denver, CO 80221"]}, "phone": "+17203970591",
+        "display_phone": "(720) 397-0591", "distance": 7791.799019960212}, {"id":
+        "VEufFTRWpKzZ_TCIrybRKw", "alias": "el-consome-de-morelos-denver-4", "name":
+        "el consome de morelos", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/_c7FYja217ewHtgh-wo36w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/el-consome-de-morelos-denver-4?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 38, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "foodtrucks", "title": "Food Trucks"}], "rating": 5.0, "coordinates":
+        {"latitude": 39.7402175680333, "longitude": -105.04957202822}, "transactions":
+        ["delivery", "pickup"], "location": {"address1": "4888 W Colfax Ave", "address2":
+        "", "address3": null, "city": "Denver", "zip_code": "80204", "country": "US",
+        "state": "CO", "display_address": ["4888 W Colfax Ave", "Denver, CO 80204"]},
+        "phone": "+17203618263", "display_phone": "(720) 361-8263", "distance": 6802.973784863793},
+        {"id": "xbK3FtZoAVcnfB1GXLWvrA", "alias": "tacos-el-metate-denver", "name":
+        "Tacos El Metate", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/QWex1u9dTcpe4bBQSWo95w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tacos-el-metate-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 86, "categories": [{"alias": "tacos", "title": "Tacos"}, {"alias":
+        "hotdogs", "title": "Fast Food"}], "rating": 4.5, "coordinates": {"latitude":
+        39.678958, "longitude": -104.959077}, "transactions": [], "location": {"address1":
+        "2060 S University Blvd", "address2": null, "address3": "", "city": "Denver",
+        "zip_code": "80210", "country": "US", "state": "CO", "display_address": ["2060
+        S University Blvd", "Denver, CO 80210"]}, "phone": "+17205109954", "display_phone":
+        "(720) 510-9954", "distance": 6360.4947398794575}, {"id": "7cHFgxf33rmfGavv4fOU1A",
+        "alias": "dos-santos-denver-2", "name": "Dos Santos", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/4McSJuG1kkrfDwlEmNdu7g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/dos-santos-denver-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 543, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "bars", "title": "Bars"}, {"alias": "tex-mex", "title": "Tex-Mex"}],
+        "rating": 4.0, "coordinates": {"latitude": 39.74341, "longitude": -104.96919},
+        "transactions": ["delivery"], "price": "$$", "location": {"address1": "1475
+        E 17th Ave", "address2": "", "address3": "", "city": "Denver", "zip_code":
+        "80218", "country": "US", "state": "CO", "display_address": ["1475 E 17th
+        Ave", "Denver, CO 80218"]}, "phone": "+13033863509", "display_phone": "(303)
+        386-3509", "distance": 883.9208966025363}, {"id": "yXVJ_K6vdpM3PwfHfkyn5g",
+        "alias": "mister-oso-denver", "name": "Mister Oso", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/nOjz1eUU1nYHoABRrRtSkg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/mister-oso-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 163, "categories": [{"alias": "tacos", "title": "Tacos"},
+        {"alias": "cocktailbars", "title": "Cocktail Bars"}, {"alias": "latin", "title":
+        "Latin American"}], "rating": 4.0, "coordinates": {"latitude": 39.76424, "longitude":
+        -104.97848}, "transactions": ["delivery"], "price": "$$", "location": {"address1":
+        "3163 Larimer St", "address2": "", "address3": null, "city": "Denver", "zip_code":
+        "80205", "country": "US", "state": "CO", "display_address": ["3163 Larimer
+        St", "Denver, CO 80205"]}, "phone": "+17206776454", "display_phone": "(720)
+        677-6454", "distance": 3264.0261379545163}, {"id": "OIQh2YtOXjlKfWPx-t8iFA",
+        "alias": "la-loteria-taqueria-denver", "name": "La Loteria Taqueria", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/DKIXk92ySsCSvuOdeEpJBw/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/la-loteria-taqueria-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 168, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 39.7158, "longitude": -104.9873},
+        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "42 S Broadway", "address2": "", "address3": null, "city": "Denver", "zip_code":
+        "80209", "country": "US", "state": "CO", "display_address": ["42 S Broadway",
+        "Denver, CO 80209"]}, "phone": "+17203899055", "display_phone": "(720) 389-9055",
+        "distance": 2632.0975240231223}, {"id": "Gr71cMRWnSO3XmCeVi2Qgg", "alias":
+        "pupusas-y-tacos-los-reyes-denver-2", "name": "Pupusas Y Tacos Los Reyes",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/X_AV-tFOvD1TYdfCH3i1EQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/pupusas-y-tacos-los-reyes-denver-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 54, "categories": [{"alias": "tacos", "title": "Tacos"}, {"alias":
+        "salvadoran", "title": "Salvadoran"}], "rating": 4.5, "coordinates": {"latitude":
+        39.654075, "longitude": -104.870029}, "transactions": ["delivery", "pickup"],
+        "location": {"address1": "10101 E Hampden Ave", "address2": null, "address3":
+        null, "city": "Denver", "zip_code": "80231", "country": "US", "state": "CO",
+        "display_address": ["10101 E Hampden Ave", "Denver, CO 80231"]}, "phone":
+        "+13035374922", "display_phone": "(303) 537-4922", "distance": 12469.877733719539},
+        {"id": "OAq-C2Nb6214refR5DgrBw", "alias": "uno-mas-taqueria-denver-3", "name":
+        "Uno Mas Taqueria", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/qaVbj54012dANJxP2RmLPw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/uno-mas-taqueria-denver-3?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 239, "categories": [{"alias": "venues", "title": "Venues &
+        Event Spaces"}, {"alias": "desserts", "title": "Desserts"}, {"alias": "tacos",
+        "title": "Tacos"}], "rating": 4.0, "coordinates": {"latitude": 39.7254099,
+        "longitude": -104.97786}, "transactions": ["delivery", "pickup"], "price":
+        "$$", "location": {"address1": "730 E 6th Ave", "address2": null, "address3":
+        "", "city": "Denver", "zip_code": "80203", "country": "US", "state": "CO",
+        "display_address": ["730 E 6th Ave", "Denver, CO 80203"]}, "phone": "+17207084623",
+        "display_phone": "(720) 708-4623", "distance": 1306.0945245961598}, {"id":
+        "bh72v_JdlaSnevE_65VG4A", "alias": "tacos-el-herradero-denver", "name": "Tacos
+        El Herradero", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/0LIx7xz6MLD3SONSsRx2bg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tacos-el-herradero-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 5, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 5.0, "coordinates": {"latitude": 39.72218, "longitude": -105.02486},
+        "transactions": ["delivery", "pickup"], "location": {"address1": "400 Federal
+        Blvd", "address2": "", "address3": null, "city": "Denver", "zip_code": "80204",
+        "country": "US", "state": "CO", "display_address": ["400 Federal Blvd", "Denver,
+        CO 80204"]}, "phone": "+17207425272", "display_phone": "(720) 742-5272", "distance":
+        4897.66815946701}, {"id": "WTe8uL6vF1ZuKAeJIvxR8w", "alias": "la-loma-denver-denver",
+        "name": "La Loma | Denver", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/cHk4OoAxO_HZCvCtzv0dvw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/la-loma-denver-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 1596, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "tex-mex", "title": "Tex-Mex"}], "rating": 4.0, "coordinates": {"latitude":
+        39.74493, "longitude": -104.98781}, "transactions": ["delivery", "pickup"],
+        "price": "$$", "location": {"address1": "1801 Broadway", "address2": "Unit
+        116", "address3": "", "city": "Denver", "zip_code": "80202", "country": "US",
+        "state": "CO", "display_address": ["1801 Broadway", "Unit 116", "Denver, CO
+        80202"]}, "phone": "+13034338300", "display_phone": "(303) 433-8300", "distance":
+        1831.6258707852928}, {"id": "gi_AORVkl5XpiA6qSHIQTw", "alias": "tacos-acapulco-denver",
+        "name": "Tacos Acapulco", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/WTItwYyApepw5S0rEyWLig/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tacos-acapulco-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 243, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "salvadoran", "title": "Salvadoran"}], "rating": 4.5, "coordinates":
+        {"latitude": 39.7398414611816, "longitude": -104.884895324707}, "transactions":
+        ["delivery"], "price": "$", "location": {"address1": "8890 E Colfax Ave",
+        "address2": "", "address3": "", "city": "Denver", "zip_code": "80220", "country":
+        "US", "state": "CO", "display_address": ["8890 E Colfax Ave", "Denver, CO
+        80220"]}, "phone": "+13033221354", "display_phone": "(303) 322-1354", "distance":
+        7318.607910805112}, {"id": "OLUUYQuNGOesrAORuqWHgg", "alias": "la-abeja-denver-2",
+        "name": "La Abeja", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/10cJwggyZ3KWfzTggvO2gA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/la-abeja-denver-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 190, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 39.7399, "longitude": -104.98079},
+        "transactions": ["delivery"], "price": "$", "location": {"address1": "508
+        E Colfax Ave", "address2": "", "address3": "", "city": "Denver", "zip_code":
+        "80203", "country": "US", "state": "CO", "display_address": ["508 E Colfax
+        Ave", "Denver, CO 80203"]}, "phone": "+13038321911", "display_phone": "(303)
+        832-1911", "distance": 1023.0872034954346}, {"id": "SXRdsBnVZvWpE6nC8el50g",
+        "alias": "la-diabla-pozole-y-mezcal-denver", "name": "La Diabla Pozole Y Mezcal",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/SuyMusP3itsCexd5T04g3Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/la-diabla-pozole-y-mezcal-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 56, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "cocktailbars", "title": "Cocktail Bars"}], "rating": 4.5, "coordinates":
+        {"latitude": 39.75548, "longitude": -104.9898}, "transactions": ["delivery",
+        "pickup"], "price": "$$", "location": {"address1": "2233 Larimer St", "address2":
+        "", "address3": null, "city": "Denver", "zip_code": "80205", "country": "US",
+        "state": "CO", "display_address": ["2233 Larimer St", "Denver, CO 80205"]},
+        "phone": "+17205191060", "display_phone": "(720) 519-1060", "distance": 2774.1515471659072},
+        {"id": "ndTTlwuebuHd6V0BpH8kkQ", "alias": "la-reyna-azteca-tacos-y-tortas-denver",
+        "name": "La Reyna Azteca Tacos Y Tortas", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/AYjOmybVKh2ptR-xiDvY8w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/la-reyna-azteca-tacos-y-tortas-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 63, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 39.65332, "longitude": -104.87341},
+        "transactions": ["delivery", "pickup"], "price": "$", "location": {"address1":
+        "9865 E Hampden Ave", "address2": null, "address3": "", "city": "Denver",
+        "zip_code": "80231", "country": "US", "state": "CO", "display_address": ["9865
+        E Hampden Ave", "Denver, CO 80231"]}, "phone": "+17206975280", "display_phone":
+        "(720) 697-5280", "distance": 12335.37997613702}, {"id": "2-J4F7aKX5O1CzODEMPxAg",
+        "alias": "las-margs-denver", "name": "Las Margs", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/bYyAlVYfWz7ZAcIigCYBGw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/las-margs-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 565, "categories": [{"alias": "bars", "title": "Bars"}, {"alias":
+        "mexican", "title": "Mexican"}], "rating": 4.0, "coordinates": {"latitude":
+        39.74051, "longitude": -104.97249}, "transactions": ["delivery", "pickup"],
+        "price": "$", "location": {"address1": "1521 Marion St", "address2": null,
+        "address3": "", "city": "Denver", "zip_code": "80218", "country": "US", "state":
+        "CO", "display_address": ["1521 Marion St", "Denver, CO 80218"]}, "phone":
+        "+17203612137", "display_phone": "(720) 361-2137", "distance": 591.3268032436563},
+        {"id": "tn9AA2mICbCXVDLr1Bw_Fw", "alias": "panaderia-y-taqueria-denver-2",
+        "name": "Panaderia Y Taqueria", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/Ey9JxW_P58vA3po44Te-Iw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/panaderia-y-taqueria-denver-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 57, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "grocery", "title": "Grocery"}, {"alias": "bakeries", "title": "Bakeries"}],
+        "rating": 4.5, "coordinates": {"latitude": 39.7852781, "longitude": -104.8095881},
+        "transactions": ["delivery", "pickup"], "price": "$", "location": {"address1":
+        "4846 Chambers Rd", "address2": "", "address3": "", "city": "Denver", "zip_code":
+        "80239", "country": "US", "state": "CO", "display_address": ["4846 Chambers
+        Rd", "Denver, CO 80239"]}, "phone": "+13033711897", "display_phone": "(303)
+        371-1897", "distance": 14805.215888145978}, {"id": "YmUtcdHhIC5cBujKytB_9A",
+        "alias": "taco-block-denver-5", "name": "Taco Block", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/Si5Tq0KP25hob5pd8dXxiQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/taco-block-denver-5?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 5, "categories": [{"alias": "foodtrucks", "title": "Food Trucks"},
+        {"alias": "tacos", "title": "Tacos"}, {"alias": "catering", "title": "Caterers"}],
+        "rating": 5.0, "coordinates": {"latitude": 39.7551688, "longitude": -105.0175257},
+        "transactions": [], "price": "$", "location": {"address1": "2475 W 26th Ave",
+        "address2": null, "address3": "", "city": "Denver", "zip_code": "80211", "country":
+        "US", "state": "CO", "display_address": ["2475 W 26th Ave", "Denver, CO 80211"]},
+        "phone": "+17202615080", "display_phone": "(720) 261-5080", "distance": 4594.76908959664},
+        {"id": "I2dOQV2yqmSvmaYccC7zCQ", "alias": "los-carboncitos-denver", "name":
+        "Los Carboncitos", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/WGwpvgXF031E_yZGN9yg3A/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/los-carboncitos-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 345, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.0, "coordinates": {"latitude": 39.76914, "longitude": -105.00665},
+        "transactions": ["delivery", "pickup"], "price": "$", "location": {"address1":
+        "3757 Pecos St", "address2": "", "address3": "", "city": "Denver", "zip_code":
+        "80211", "country": "US", "state": "CO", "display_address": ["3757 Pecos St",
+        "Denver, CO 80211"]}, "phone": "+13034580880", "display_phone": "(303) 458-0880",
+        "distance": 4862.647878050695}, {"id": "PvCfyIq7E0arem4gzUtr9Q", "alias":
+        "tacos-la-tapatia-denver", "name": "Tacos La Tapatia", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/VBfS5fhMy1uGlZpxNAEN7w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tacos-la-tapatia-denver?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 15, "categories": [{"alias": "tacos", "title": "Tacos"}],
+        "rating": 4.5, "coordinates": {"latitude": 39.779622, "longitude": -104.95563483},
+        "transactions": ["delivery", "pickup"], "location": {"address1": "4535 Thompson
+        Ct", "address2": null, "address3": "", "city": "Denver", "zip_code": "80216",
+        "country": "US", "state": "CO", "display_address": ["4535 Thompson Ct", "Denver,
+        CO 80216"]}, "phone": "+17205738692", "display_phone": "(720) 573-8692", "distance":
+        5058.575413952113}], "total": 1800, "region": {"center": {"longitude": -104.97024536132812,
+        "latitude": 39.73552421220229}}}'
+  recorded_at: Tue, 26 Apr 2022 18:56:55 GMT
+recorded_with: VCR 6.1.0

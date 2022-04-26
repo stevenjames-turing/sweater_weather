@@ -1,22 +1,25 @@
 class Api::V1::BackgroundsController < ApplicationController
-    def index
+
+  def index
+    # Checks to ensure param is not missing or empty string
     if params[:location].blank?
       json_response({ "error": {"message" => 'invalid parameters'} }, :bad_request)
-    else 
-      get_coordinates(params[:location])
-      get_current_conditions(@coordinates[:lat], @coordinates[:lng])
-      photo = UnsplashFacade.photo_search(params[:location], @current_conditions.conditions)
-      json_response(PhotoSerializer.new(photo).serializable_hash.to_json)
+    else
+      # Private methods will return weather conditions and matching photo for location
+      get_current_conditions(params[:location])
+      photo_search(params[:location], @current_conditions.conditions)
+
+      json_response(PhotoSerializer.new(@photo).serializable_hash.to_json)
     end
   end
 
   private 
 
-    def get_coordinates(location)
-      @coordinates = MapquestService.get_city_coordinates(location)
+    def get_current_conditions(location)
+      @current_conditions = OpenweatherFacade.weather_forecast(location, "current")
     end
 
-    def get_current_conditions(latitude, longitude)
-      @current_conditions = OpenweatherFacade.current_weather(latitude, longitude)
+    def photo_search(location, conditions)
+      @photo = UnsplashFacade.photo_search(location, conditions)
     end
 end

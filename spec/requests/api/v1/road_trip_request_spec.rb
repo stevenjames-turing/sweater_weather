@@ -11,7 +11,7 @@ describe 'RoadTrip Endpoint', :vcr do
         @request_body = {
                           "road_trip": {
                                         "origin": "Denver,CO",
-                                        "destination": "Pueblo,CO",
+                                        "destination": "St. Louis,MO",
                                         "api_key": "#{user.api_key}"
                                         }
                         }

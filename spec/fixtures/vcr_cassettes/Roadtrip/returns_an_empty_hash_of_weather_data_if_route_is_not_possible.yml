@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.mapquestapi.com/directions/v2/route?from=Denver,CO&key=dAFPettxbluB2HDNjJSQTo8DUudlJvl5&outFormat=json&to=London,%20UK
+    uri: http://www.mapquestapi.com/directions/v2/route?from=st.%20louis,%20mo&key=dAFPettxbluB2HDNjJSQTo8DUudlJvl5&outFormat=json&to=london,%20UK
     body:
       encoding: US-ASCII
       string: ''
@@ -19,17 +19,17 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 26 Apr 2022 18:38:33 GMT
+      - Tue, 26 Apr 2022 19:03:20 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
       - '278'
       Set-Cookie:
-      - JSESSIONID=06E7B84DD59715FD0350B7A75891C5CE; Path=/directions; HttpOnly
+      - JSESSIONID=222F2DFBD9A3D6D471DC339E5BE3C2E1; Path=/directions; HttpOnly
       Expires:
       - Mon, 20 Dec 1998 01:00:00 GMT
       Last-Modified:
-      - Tue, 26 Apr 2022 18:38:33 GMT
+      - Tue, 26 Apr 2022 19:03:20 GMT
       Cache-Control:
       - no-cache, must-revalidate
       Pragma:
@@ -46,5 +46,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIiwiaW1hZ2VVcmwiOiJodHRwOi8vYXBpLm1xY2RuLmNvbS9yZXMvbXFsb2dvLmdpZiIsInRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
-  recorded_at: Tue, 26 Apr 2022 18:38:33 GMT
+  recorded_at: Tue, 26 Apr 2022 19:03:20 GMT
 recorded_with: VCR 6.1.0

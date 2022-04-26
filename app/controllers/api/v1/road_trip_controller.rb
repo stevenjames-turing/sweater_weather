@@ -5,6 +5,8 @@ class Api::V1::RoadTripController < ApplicationController
     # Returns error message if data was passed through URL
     if params[:road_trip].blank?
       json_response({ "error": {"message" => 'missing request body'} }, :bad_request)
+    # Ensure all params are present in request body
+    # Return error if any params are empty string or missing
     elsif (params[:road_trip][:origin].blank?) || (params[:road_trip][:destination].blank?) || (params[:road_trip][:api_key].blank?)
       json_response({ "error": {"message" => 'required parameters are missing or empty'} }, :bad_request)
     else 
@@ -12,11 +14,7 @@ class Api::V1::RoadTripController < ApplicationController
       # Checking API key against User database
       user = User.find_by(api_key: params[:road_trip][:api_key])
       if user
-        get_destination_coordinates(params[:road_trip][:destination])
-        get_route(params[:road_trip][:origin], params[:road_trip][:destination])
-        get_current_conditions(@destination_coordinates[:lat], @destination_coordinates[:lng])
-
-        roadtrip = Roadtrip.new(params[:road_trip][:origin], params[:road_trip][:destination], @travel_time, @current_conditions)
+        roadtrip = Roadtrip.new(params[:road_trip][:origin], params[:road_trip][:destination])
         
         # Serialized JSON response if all authentication checks pass
         json_response(RoadtripSerializer.new(roadtrip))
@@ -26,24 +24,4 @@ class Api::V1::RoadTripController < ApplicationController
       end
     end 
   end
-
-  private 
-
-    def get_route(start, destination)
-      directions = MapquestService.directions(start, destination)
-      if directions[:info][:statuscode] == 402
-        @travel_time = 'impossible route'
-      else 
-        @travel_time = directions[:route][:formattedTime]
-      end
-    end
-
-    def get_destination_coordinates(location)
-      @destination_coordinates = MapquestService.get_city_coordinates(location)
-    end
-    
-    def get_current_conditions(latitude, longitude)
-      @current_conditions = OpenweatherFacade.current_weather(latitude, longitude)
-    end
-
 end
