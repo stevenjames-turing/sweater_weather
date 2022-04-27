@@ -16,6 +16,12 @@
       </ul>
     </li>
     <li><a href="#built-with">Built With</a></li>
+    <li>
+      <a href="#testing">Testing</a>
+      <ul>
+        <li><a href="#rspec-test-results">RSpec Test Results</a></li>
+      </ul>
+    </li>
     <li><a href="#future_additions">Future Additions</a></li>
     <li><a href="Contributors">Contributors</a></li>
   </ol>
@@ -396,7 +402,23 @@
 - Other tech used: 
   - Postman
   - RSpec 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Testing:
+
+  - This application is fully tested through RSpec. 
+  - You can run RSpec on any directory/file using `bundle exec rspec <directory/file>`
+  - SimpleCov is included to ensure tests have full coverage.
+  - To run the Simplecov report type the following into your terminal: `open coverage/index.html`
+  - See details here: [SimpleCov](https://github.com/simplecov-ruby/simplecov)
+  
+  ### RSpec Test Results
+
+  ![Test Results](https://user-images.githubusercontent.com/91357724/165409918-8e861cc4-25f6-4d71-b061-4b836ac81c31.png)
+  
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ## Future Additions:
 
