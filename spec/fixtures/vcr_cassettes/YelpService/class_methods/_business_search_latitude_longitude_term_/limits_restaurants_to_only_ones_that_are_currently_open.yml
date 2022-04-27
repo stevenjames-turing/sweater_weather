@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Dailylimit:
-      - '5000'
-      X-Routing-Service:
-      - routing-main--useast1-6df47595db-mlbp2; site=public_api_v3
       Ratelimit-Remaining:
-      - '4991'
-      X-B3-Sampled:
-      - '0'
+      - '4998'
       Ratelimit-Resettime:
-      - '2022-04-27T00:00:00+00:00'
+      - '2022-04-28T00:00:00+00:00'
       Server:
       - envoy
+      X-B3-Sampled:
+      - '0'
+      X-Routing-Service:
+      - routing-main--useast1-5799c768fd-kn97s; site=public_api_v3
+      Ratelimit-Dailylimit:
+      - '5000'
       X-Zipkin-Id:
-      - 9f2d15b6bafed360
+      - 6af0f60c3a735835
       X-Cloudmap:
       - routing_useast1
       X-Proxied:
-      - 10-65-73-48-useast1aprod
+      - 10-65-91-109-useast1aprod
       X-Extlb:
-      - 10-65-73-48-useast1aprod
+      - 10-65-91-109-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 26 Apr 2022 18:51:22 GMT
+      - Wed, 27 Apr 2022 00:02:58 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-dal21244-DAL
+      - cache-dal21278-DAL
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -73,50 +73,41 @@ http_interactions:
         {"address1": "3191 S Grand Blvd", "address2": null, "address3": "", "city":
         "St. Louis", "zip_code": "63118", "country": "US", "state": "MO", "display_address":
         ["3191 S Grand Blvd", "St. Louis, MO 63118"]}, "phone": "+13142609996", "display_phone":
-        "(314) 260-9996", "distance": 5955.319122848431}, {"id": "k2fvyjaTNYFQJw757Bgqbg",
-        "alias": "padrinos-mexican-restaurant-st-louis", "name": "Padrinos Mexican
-        Restaurant", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/AeCDEbkjH-M4uZZ_bR5x4g/o.jpg",
+        "(314) 260-9996", "distance": 5955.319122848431}, {"id": "4mGnHfvwjE6P-vuKowHzCQ",
+        "alias": "taco-buddha-university-city", "name": "Taco Buddha", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/EAg-OdY4I2fwIeb8raVkNw/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/taco-buddha-university-city?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 298, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "tex-mex", "title": "Tex-Mex"}, {"alias": "newmexican", "title":
+        "New Mexican Cuisine"}], "rating": 4.5, "coordinates": {"latitude": 38.65373799506,
+        "longitude": -90.3299817857961}, "transactions": ["delivery"], "price": "$$",
+        "location": {"address1": "7405 Pershing Ave", "address2": "", "address3":
+        null, "city": "University City", "zip_code": "63130", "country": "US", "state":
+        "MO", "display_address": ["7405 Pershing Ave", "University City, MO 63130"]},
+        "phone": "+13145029951", "display_phone": "(314) 502-9951", "distance": 7547.14746726953},
+        {"id": "k2fvyjaTNYFQJw757Bgqbg", "alias": "padrinos-mexican-restaurant-st-louis",
+        "name": "Padrinos Mexican Restaurant", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/AeCDEbkjH-M4uZZ_bR5x4g/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/padrinos-mexican-restaurant-st-louis?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
-        "review_count": 32, "categories": [{"alias": "mexican", "title": "Mexican"},
+        "review_count": 33, "categories": [{"alias": "mexican", "title": "Mexican"},
         {"alias": "cocktailbars", "title": "Cocktail Bars"}, {"alias": "desserts",
-        "title": "Desserts"}], "rating": 5.0, "coordinates": {"latitude": 38.6016,
+        "title": "Desserts"}], "rating": 4.5, "coordinates": {"latitude": 38.6016,
         "longitude": -90.24275}, "transactions": ["delivery", "pickup"], "location":
         {"address1": "3143 S Grand Blvd", "address2": "", "address3": null, "city":
         "St. Louis", "zip_code": "63118", "country": "US", "state": "MO", "display_address":
         ["3143 S Grand Blvd", "St. Louis, MO 63118"]}, "phone": "+13142820357", "display_phone":
-        "(314) 282-0357", "distance": 5737.933513960816}, {"id": "WYFbNrYDgw7gNDvMxa0rKA",
-        "alias": "dos-reyes-mexican-restaurant-st-louis-2", "name": "Dos Reyes Mexican
-        Restaurant", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/VC7xSGYKaX5PCwfKH0EUCw/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/dos-reyes-mexican-restaurant-st-louis-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
-        "review_count": 206, "categories": [{"alias": "mexican", "title": "Mexican"},
-        {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}], "rating": 4.5,
-        "coordinates": {"latitude": 38.57761, "longitude": -90.29388}, "transactions":
-        ["delivery", "pickup"], "price": "$$", "location": {"address1": "5912 Hampton
-        Ave", "address2": null, "address3": null, "city": "St. Louis", "zip_code":
-        "63109", "country": "US", "state": "MO", "display_address": ["5912 Hampton
-        Ave", "St. Louis, MO 63109"]}, "phone": "+13148335550", "display_phone": "(314)
-        833-5550", "distance": 9489.406728360887}, {"id": "rVzbBAG3BDlx2-OFUOq4MQ",
-        "alias": "el-toluco-taqueria-and-grocery-saint-louis", "name": "El Toluco
-        Taqueria & Grocery", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/tha2HlJlPB6UV6vt-Wq0QQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/el-toluco-taqueria-and-grocery-saint-louis?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
-        "review_count": 155, "categories": [{"alias": "intlgrocery", "title": "International
-        Grocery"}, {"alias": "tacos", "title": "Tacos"}], "rating": 4.5, "coordinates":
-        {"latitude": 38.591857, "longitude": -90.504181}, "transactions": ["delivery"],
-        "price": "$", "location": {"address1": "14234 Manchester", "address2": null,
-        "address3": "", "city": "Saint Louis", "zip_code": "63011", "country": "US",
-        "state": "MO", "display_address": ["14234 Manchester", "Saint Louis, MO 63011"]},
-        "phone": "+16366865444", "display_phone": "(636) 686-5444", "distance": 23685.633971593103},
-        {"id": "RLaS9hQJXAc7ED2wr9dWeA", "alias": "taqueria-z-edwardsville-2", "name":
-        "Taqueria Z", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/c613GWUtbXlUONGGzt14vQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/taqueria-z-edwardsville-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
-        "review_count": 116, "categories": [{"alias": "tacos", "title": "Tacos"},
-        {"alias": "foodstands", "title": "Food Stands"}], "rating": 4.5, "coordinates":
-        {"latitude": 38.8106682362947, "longitude": -89.9550345373928}, "transactions":
-        ["pickup"], "price": "$", "location": {"address1": "109 E Park St", "address2":
-        "", "address3": null, "city": "Edwardsville", "zip_code": "62025", "country":
-        "US", "state": "IL", "display_address": ["109 E Park St", "Edwardsville, IL
-        62025"]}, "phone": "+16183075018", "display_phone": "(618) 307-5018", "distance":
-        30511.766077616212}, {"id": "gku-vC4YB5c7ZuNyLhjNbQ", "alias": "taqueria-el-bronco-saint-louis",
+        "(314) 282-0357", "distance": 5737.933513960816}, {"id": "cEgsHkAnpYQbA60pIIZYKQ",
+        "alias": "the-taco-and-ice-cream-joint-st-louis", "name": "The Taco and Ice
+        Cream Joint", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/oIJQcJWYRapT1f3pj2y_zA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/the-taco-and-ice-cream-joint-st-louis?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 204, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "gourmet", "title": "Specialty Food"}, {"alias": "icecream", "title":
+        "Ice Cream & Frozen Yogurt"}], "rating": 3.5, "coordinates": {"latitude":
+        38.59368, "longitude": -90.22933}, "transactions": ["delivery", "pickup"],
+        "price": "$", "location": {"address1": "2738 Cherokee St", "address2": "",
+        "address3": null, "city": "St. Louis", "zip_code": "63118", "country": "US",
+        "state": "MO", "display_address": ["2738 Cherokee St", "St. Louis, MO 63118"]},
+        "phone": "+13142245799", "display_phone": "(314) 224-5799", "distance": 6721.042422202585},
+        {"id": "gku-vC4YB5c7ZuNyLhjNbQ", "alias": "taqueria-el-bronco-saint-louis",
         "name": "Taqueria El Bronco", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/DDel6Fn59c2sX8Z221_oSQ/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/taqueria-el-bronco-saint-louis?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
         "review_count": 255, "categories": [{"alias": "mexican", "title": "Mexican"}],
@@ -135,20 +126,19 @@ http_interactions:
         N Lindbergh Blvd", "address2": "", "address3": "", "city": "Bridgeton", "zip_code":
         "63043", "country": "US", "state": "MO", "display_address": ["3157 N Lindbergh
         Blvd", "Bridgeton, MO 63043"]}, "phone": "+13142918500", "display_phone":
-        "(314) 291-8500", "distance": 16249.586601702165}, {"id": "cEgsHkAnpYQbA60pIIZYKQ",
-        "alias": "the-taco-and-ice-cream-joint-st-louis", "name": "The Taco and Ice
-        Cream Joint", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/oIJQcJWYRapT1f3pj2y_zA/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/the-taco-and-ice-cream-joint-st-louis?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
-        "review_count": 204, "categories": [{"alias": "mexican", "title": "Mexican"},
-        {"alias": "gourmet", "title": "Specialty Food"}, {"alias": "icecream", "title":
-        "Ice Cream & Frozen Yogurt"}], "rating": 3.5, "coordinates": {"latitude":
-        38.59368, "longitude": -90.22933}, "transactions": ["delivery", "pickup"],
-        "price": "$", "location": {"address1": "2738 Cherokee St", "address2": "",
-        "address3": null, "city": "St. Louis", "zip_code": "63118", "country": "US",
-        "state": "MO", "display_address": ["2738 Cherokee St", "St. Louis, MO 63118"]},
-        "phone": "+13142245799", "display_phone": "(314) 224-5799", "distance": 6721.042422202585},
-        {"id": "NJaR_2hke7NNAC6l1Ohr8g", "alias": "el-burro-loco-st-louis", "name":
-        "El Burro Loco", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Td4AhauAL6IB5BjZd5hMug/o.jpg",
+        "(314) 291-8500", "distance": 16249.586601702165}, {"id": "WYFbNrYDgw7gNDvMxa0rKA",
+        "alias": "dos-reyes-mexican-restaurant-st-louis-2", "name": "Dos Reyes Mexican
+        Restaurant", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/VC7xSGYKaX5PCwfKH0EUCw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/dos-reyes-mexican-restaurant-st-louis-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 206, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}], "rating": 4.5,
+        "coordinates": {"latitude": 38.57761, "longitude": -90.29388}, "transactions":
+        ["delivery", "pickup"], "price": "$$", "location": {"address1": "5912 Hampton
+        Ave", "address2": null, "address3": null, "city": "St. Louis", "zip_code":
+        "63109", "country": "US", "state": "MO", "display_address": ["5912 Hampton
+        Ave", "St. Louis, MO 63109"]}, "phone": "+13148335550", "display_phone": "(314)
+        833-5550", "distance": 9489.406728360887}, {"id": "NJaR_2hke7NNAC6l1Ohr8g",
+        "alias": "el-burro-loco-st-louis", "name": "El Burro Loco", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Td4AhauAL6IB5BjZd5hMug/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/el-burro-loco-st-louis?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
         "review_count": 489, "categories": [{"alias": "mexican", "title": "Mexican"}],
         "rating": 4.0, "coordinates": {"latitude": 38.645175, "longitude": -90.261812},
@@ -156,9 +146,19 @@ http_interactions:
         N Euclid Ave", "address2": "", "address3": "", "city": "St. Louis", "zip_code":
         "63108", "country": "US", "state": "MO", "display_address": ["313 N Euclid
         Ave", "St. Louis, MO 63108"]}, "phone": "+13142245371", "display_phone": "(314)
-        224-5371", "distance": 1856.4726017564774}, {"id": "79nXYNRPoZBc9_y_OLZg2w",
-        "alias": "mission-taco-joint-central-west-end-st-louis-3", "name": "Mission
-        Taco Joint - Central West End", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/1aJu2ogkiA4GgVaodSKM4g/o.jpg",
+        224-5371", "distance": 1856.4726017564774}, {"id": "S8h_kP4dx37KZaFJ7bSsIg",
+        "alias": "pit-stop-st-louis-2", "name": "Pit Stop", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/WlD7fSXQdhyZo4umOTXqKw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/pit-stop-st-louis-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 78, "categories": [{"alias": "newamerican", "title": "American
+        (New)"}, {"alias": "salad", "title": "Salad"}, {"alias": "tradamerican", "title":
+        "American (Traditional)"}], "rating": 5.0, "coordinates": {"latitude": 38.615318,
+        "longitude": -90.277263}, "transactions": ["delivery", "restaurant_reservation",
+        "pickup"], "price": "$$", "location": {"address1": "2130 Macklind Ave", "address2":
+        "", "address3": null, "city": "St. Louis", "zip_code": "63110", "country":
+        "US", "state": "MO", "display_address": ["2130 Macklind Ave", "St. Louis,
+        MO 63110"]}, "phone": "+13146962999", "display_phone": "(314) 696-2999", "distance":
+        5152.227069137274}, {"id": "79nXYNRPoZBc9_y_OLZg2w", "alias": "mission-taco-joint-central-west-end-st-louis-3",
+        "name": "Mission Taco Joint - Central West End", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/1aJu2ogkiA4GgVaodSKM4g/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/mission-taco-joint-central-west-end-st-louis-3?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
         "review_count": 298, "categories": [{"alias": "mexican", "title": "Mexican"},
         {"alias": "cocktailbars", "title": "Cocktail Bars"}, {"alias": "beerbar",
@@ -179,7 +179,17 @@ http_interactions:
         "", "city": "St. Louis", "zip_code": "63104", "country": "US", "state": "MO",
         "display_address": ["908 Lafayette Ave", "St. Louis, MO 63104"]}, "phone":
         "+13148588226", "display_phone": "(314) 858-8226", "distance": 5846.280698173572},
-        {"id": "HKS-63JzfR0DMNVLBuokYw", "alias": "mission-taco-joint-delmar-loop-st-louis-2",
+        {"id": "RLaS9hQJXAc7ED2wr9dWeA", "alias": "taqueria-z-edwardsville-2", "name":
+        "Taqueria Z", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/c613GWUtbXlUONGGzt14vQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/taqueria-z-edwardsville-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 116, "categories": [{"alias": "tacos", "title": "Tacos"},
+        {"alias": "foodstands", "title": "Food Stands"}], "rating": 4.5, "coordinates":
+        {"latitude": 38.8106682362947, "longitude": -89.9550345373928}, "transactions":
+        ["pickup"], "price": "$", "location": {"address1": "109 E Park St", "address2":
+        "", "address3": null, "city": "Edwardsville", "zip_code": "62025", "country":
+        "US", "state": "IL", "display_address": ["109 E Park St", "Edwardsville, IL
+        62025"]}, "phone": "+16183075018", "display_phone": "(618) 307-5018", "distance":
+        30511.766077616212}, {"id": "HKS-63JzfR0DMNVLBuokYw", "alias": "mission-taco-joint-delmar-loop-st-louis-2",
         "name": "Mission Taco Joint - Delmar Loop", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/dNgSbUFkLBf0XI-MrJ1LWA/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/mission-taco-joint-delmar-loop-st-louis-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
         "review_count": 1026, "categories": [{"alias": "mexican", "title": "Mexican"},
@@ -239,37 +249,28 @@ http_interactions:
         {"address1": "4099 Chouteau Ave", "address2": "", "address3": null, "city":
         "St. Louis", "zip_code": "63110", "country": "US", "state": "MO", "display_address":
         ["4099 Chouteau Ave", "St. Louis, MO 63110"]}, "phone": "+13149258101", "display_phone":
-        "(314) 925-8101", "distance": 2815.2140102720427}, {"id": "2Mp3YflkEmA3ELaZB7AhHg",
-        "alias": "diablitos-cantina-saint-louis", "name": "Diablitos Cantina", "image_url":
-        "https://s3-media4.fl.yelpcdn.com/bphoto/lVa4x1QDR-4xfGwAAmM7-g/o.jpg", "is_closed":
-        false, "url": "https://www.yelp.com/biz/diablitos-cantina-saint-louis?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "(314) 925-8101", "distance": 2815.2140102720427}, {"id": "LvOoifA9mHTNlhCL3GAbkg",
+        "alias": "lucha-ii-authentic-mexican-food-st-louis-2", "name": "Lucha II Authentic
+        Mexican Food", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/c00fFOwjSNHhxOI4q3wBDA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/lucha-ii-authentic-mexican-food-st-louis-2?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
+        "review_count": 110, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 3.5, "coordinates": {"latitude": 38.63863449014488, "longitude":
+        -90.23159082883556}, "transactions": ["delivery", "pickup"], "price": "$$",
+        "location": {"address1": "522 N Grand Blvd", "address2": null, "address3":
+        null, "city": "St. Louis", "zip_code": "63103", "country": "US", "state":
+        "MO", "display_address": ["522 N Grand Blvd", "St. Louis, MO 63103"]}, "phone":
+        "+13144457511", "display_phone": "(314) 445-7511", "distance": 1898.4124279654022},
+        {"id": "2Mp3YflkEmA3ELaZB7AhHg", "alias": "diablitos-cantina-saint-louis",
+        "name": "Diablitos Cantina", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/lVa4x1QDR-4xfGwAAmM7-g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/diablitos-cantina-saint-louis?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
         "review_count": 203, "categories": [{"alias": "mexican", "title": "Mexican"},
         {"alias": "bars", "title": "Bars"}], "rating": 3.5, "coordinates": {"latitude":
         38.637956, "longitude": -90.242166}, "transactions": ["delivery", "pickup"],
         "price": "$$", "location": {"address1": "3919 W Pine", "address2": "", "address3":
         "", "city": "Saint Louis", "zip_code": "63108", "country": "US", "state":
         "MO", "display_address": ["3919 W Pine", "Saint Louis, MO 63108"]}, "phone":
-        "+13146444430", "display_phone": "(314) 644-4430", "distance": 1692.7325370003166},
-        {"id": "OXDo1mHlp2Io3CM6a1aB1w", "alias": "seoul-taco-saint-louis-3", "name":
-        "Seoul Taco", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/O0MQyIBdAxmb2aJZzhj1mg/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/seoul-taco-saint-louis-3?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
-        "review_count": 726, "categories": [{"alias": "korean", "title": "Korean"},
-        {"alias": "asianfusion", "title": "Asian Fusion"}], "rating": 4.0, "coordinates":
-        {"latitude": 38.65646, "longitude": -90.30755}, "transactions": ["delivery",
-        "pickup"], "price": "$", "location": {"address1": "6665 Delmar Blvd", "address2":
-        "", "address3": "", "city": "Saint Louis", "zip_code": "63130", "country":
-        "US", "state": "MO", "display_address": ["6665 Delmar Blvd", "Saint Louis,
-        MO 63130"]}, "phone": "+13148631148", "display_phone": "(314) 863-1148", "distance":
-        5613.464492113873}, {"id": "kldxUk_h0wx7534Xl9K0bA", "alias": "palacios-mexican-restaurant-saint-louis",
-        "name": "Palacios Mexican Restaurant", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/H_NsiFMweE_ieOhHQhfO6w/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/palacios-mexican-restaurant-saint-louis?adjust_creative=HpJeyNvw52L4ND8Cc3A7JA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HpJeyNvw52L4ND8Cc3A7JA",
-        "review_count": 21, "categories": [{"alias": "mexican", "title": "Mexican"}],
-        "rating": 4.5, "coordinates": {"latitude": 38.5823593, "longitude": -90.2448273},
-        "transactions": ["delivery"], "price": "$", "location": {"address1": "4101
-        S Grand Blvd", "address2": "", "address3": "", "city": "Saint Louis", "zip_code":
-        "63118", "country": "US", "state": "MO", "display_address": ["4101 S Grand
-        Blvd", "Saint Louis, MO 63118"]}, "phone": "+13147524367", "display_phone":
-        "(314) 752-4367", "distance": 7874.309893536115}], "total": 880, "region":
-        {"center": {"longitude": -90.24307250976562, "latitude": 38.653162653229444}}}'
-  recorded_at: Tue, 26 Apr 2022 18:51:22 GMT
+        "+13146444430", "display_phone": "(314) 644-4430", "distance": 1692.7325370003166}],
+        "total": 872, "region": {"center": {"longitude": -90.24307250976562, "latitude":
+        38.653162653229444}}}'
+  recorded_at: Wed, 27 Apr 2022 00:02:58 GMT
 recorded_with: VCR 6.1.0
