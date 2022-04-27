@@ -1,0 +1,500 @@
+<div id="top"></div>
+
+<h1 id="sweater-weather">Sweater Weather</h1>
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li>
+      <a href="#api-info">API Info</a>
+      <ul>
+        <li><a href="#exposed">Exposed</a></li>
+        <li><a href="#consumed">Consumed</a></li>
+      </ul>
+    </li>
+    <li><a href="#built-with">Built With</a></li>
+    <li>
+      <a href="#testing">Testing</a>
+      <ul>
+        <li><a href="#rspec-test-results">RSpec Test Results</a></li>
+      </ul>
+    </li>
+    <li><a href="#future_additions">Future Additions</a></li>
+    <li><a href="Contributors">Contributors</a></li>
+  </ol>
+</details>
+
+<h2 id="about-the-project">About The Project</h2>
+<ul>
+  <li>Have you ever taken a short day trip only to arrive and realize you didn&#39;t prepare for the weather? Have you
+    ever checked the weather just to have the conditions be completely different by time you arrived? Sweater Weather is
+    designed as an application to help users better plan road trips. The app includes weather forecasts for the
+    destination city at your estimated arrival time along with Yelp restaurant suggestions at the destination city.
+  </li>
+  <li>Sweater Weather is the final project for third moduel of Turing&#39;s Back-End Engineer program. It&#39;s designed
+    to mimic a service-oriented architecture. My job was to expose an API that satisfies the requirements of my
+    front-end users. </li>
+  <li><a href="https://backend.turing.edu/module3/projects/sweater_weather/">Turing Project Page</a></li>
+</ul>
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+  <li>Fork and Clone the repo: <a href="https://github.com/stevenjames-turing/sweater_weather">GitHub -
+      stevenjames-turing/sweater_weather</a></li>
+  <li>Install gem packages: <code>bundle install</code></li>
+  <li>Setup the database: <code>rails db:{create,migrate}</code></li>
+  <li>Get OpenWeather API key <a href="https://openweathermap.org/">here</a></li>
+  <li>Get MapQuest Geocoding API key <a href="https://developer.mapquest.com/documentation/geocoding-api/">here</a></li>
+  <li>Get Unsplash API key <a href="https://unsplash.com/developers">here</a></li>
+  <li>Get Yelp API key <a href="https://www.yelp.com/developers/documentation/v3">here</a></li>
+  <li>Setup Figaro: <code>bundle exec figaro install</code></li>
+  <li>Add API keys to <code>config/application.yml</code>
+    <ul>
+      <li>
+        <pre><code><span class="hljs-symbol">openweather_key:</span> <span class="hljs-params">&lt;put_your_key_here&gt;</span>
+<span class="hljs-symbol">mapquest_key:</span> <span class="hljs-params">&lt;put_your_key_here&gt;</span>
+<span class="hljs-symbol">unsplash_key:</span> <span class="hljs-params">&lt;put_your_key_here&gt;</span>
+<span class="hljs-symbol">yelp_key:</span> <span class="hljs-params">&lt;put_your_key_here&gt;</span>
+</code></pre>
+      </li>
+    </ul>
+  </li>
+</ol>
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<h2 id="api-info-">API Info:</h2>
+<h3 id="exposed-">Exposed:</h3>
+<ul>
+  <li>
+    <p><strong>Roadtrip</strong>: </p>
+    <ul>
+      <li><code>POST /api/v1/road_trip</code></li>
+      <li>Response includes: <ul>
+          <li><img width="960" alt="Screen Shot 2022-04-26 at 4 06 49 PM"
+              src="https://user-images.githubusercontent.com/91357724/165392457-bc131f42-2099-470a-9480-cd47dbac4018.png">
+          </li>
+        </ul>
+      </li>
+      <li>Example Request
+        <pre><code>  POST /api/v1/road_trip
+  Content-<span class="hljs-keyword">Type</span>: application/json
+  <span class="hljs-keyword">Accept</span>: application/json
+  Request <span class="hljs-keyword">Body</span>: 
+     {
+        <span class="hljs-string">"origin"</span>: <span class="hljs-string">"Denver,CO"</span>,
+        <span class="hljs-string">"destination"</span>: <span class="hljs-string">"Fort Collins,CO"</span>,
+        <span class="hljs-string">"api_key"</span>: <span class="hljs-string">"6d76a22a274ae6ea30c7b60a11a2c15c"</span>
+      }
+</code></pre>
+      </li>
+      <li>Example Response
+        <pre><code>  {
+    <span class="hljs-attr">"data"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"null"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"roadtrip"</span>,
+        <span class="hljs-attr">"attributes"</span>: {
+            <span class="hljs-attr">"start_city"</span>: <span class="hljs-string">"Denver,CO"</span>,
+            <span class="hljs-attr">"end_city"</span>: <span class="hljs-string">"Fort Collins,CO"</span>,
+            <span class="hljs-attr">"travel_time"</span>: <span class="hljs-string">"01:03:57"</span>,
+            <span class="hljs-attr">"weather_at_eta"</span>: {
+                <span class="hljs-attr">"temperature"</span>: <span class="hljs-number">71.8</span>,
+                <span class="hljs-attr">"conditions"</span>: <span class="hljs-string">"clear sky"</span>
+            }
+        }
+    }
+  }
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Weather Forecast</strong>: </p>
+    <ul>
+      <li><code>GET api/v1/forecast?location=&lt;input_location_here&gt;</code></li>
+      <li>
+        <p>Response includes: </p>
+        <ul>
+          <li><img width="809" alt="Screen Shot 2022-04-26 at 3 23 54 PM"
+              src="https://user-images.githubusercontent.com/91357724/165385907-c9965b6b-0920-467d-a477-6987808eb9a3.png">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Example Response</p>
+        <pre><code>  GET api/v1/forecast?location=denver,co
+
+  {
+  <span class="hljs-string">"data"</span>: {
+      <span class="hljs-string">"id"</span>: <span class="hljs-string">"null"</span>,
+      <span class="hljs-string">"type"</span>: <span class="hljs-string">"forecast"</span>,
+      <span class="hljs-string">"attributes"</span>: {
+          <span class="hljs-string">"current_weather"</span>: {
+              <span class="hljs-string">"datetime"</span>: <span class="hljs-string">"2022-04-26T14:12:38.000-05:00"</span>,
+              <span class="hljs-string">"sunrise"</span>: <span class="hljs-string">"2022-04-26T07:06:38.000-05:00"</span>,
+              <span class="hljs-string">"sunset"</span>: <span class="hljs-string">"2022-04-26T20:48:30.000-05:00"</span>,
+              <span class="hljs-string">"temperature"</span>: <span class="hljs-number">70.41</span>,
+              <span class="hljs-string">"feels_like"</span>: <span class="hljs-number">67.77</span>,
+              <span class="hljs-string">"humidity"</span>: <span class="hljs-number">13</span>,
+              <span class="hljs-string">"uvi"</span>: <span class="hljs-number">8.82</span>,
+              <span class="hljs-string">"visibility"</span>: <span class="hljs-number">10000</span>,
+              <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+              <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04d"</span>
+          },
+          <span class="hljs-string">"daily_weather"</span>: [
+              [
+                  {
+                      <span class="hljs-string">"date"</span>: <span class="hljs-string">"2022-04-26"</span>,
+                      <span class="hljs-string">"sunrise"</span>: <span class="hljs-string">"2022-04-26T07:06:38.000-05:00"</span>,
+                      <span class="hljs-string">"sunset"</span>: <span class="hljs-string">"2022-04-26T20:48:30.000-05:00"</span>,
+                      <span class="hljs-string">"max_temp"</span>: <span class="hljs-number">72.27</span>,
+                      <span class="hljs-string">"min_temp"</span>: <span class="hljs-number">43.52</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"date"</span>: <span class="hljs-string">"2022-04-27"</span>,
+                      <span class="hljs-string">"sunrise"</span>: <span class="hljs-string">"2022-04-27T07:05:20.000-05:00"</span>,
+                      <span class="hljs-string">"sunset"</span>: <span class="hljs-string">"2022-04-27T20:49:30.000-05:00"</span>,
+                      <span class="hljs-string">"max_temp"</span>: <span class="hljs-number">73.35</span>,
+                      <span class="hljs-string">"min_temp"</span>: <span class="hljs-number">53.29</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"light rain"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"10d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"date"</span>: <span class="hljs-string">"2022-04-28"</span>,
+                      <span class="hljs-string">"sunrise"</span>: <span class="hljs-string">"2022-04-28T07:04:02.000-05:00"</span>,
+                      <span class="hljs-string">"sunset"</span>: <span class="hljs-string">"2022-04-28T20:50:31.000-05:00"</span>,
+                      <span class="hljs-string">"max_temp"</span>: <span class="hljs-number">75.58</span>,
+                      <span class="hljs-string">"min_temp"</span>: <span class="hljs-number">52.59</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"date"</span>: <span class="hljs-string">"2022-04-29"</span>,
+                      <span class="hljs-string">"sunrise"</span>: <span class="hljs-string">"2022-04-29T07:02:46.000-05:00"</span>,
+                      <span class="hljs-string">"sunset"</span>: <span class="hljs-string">"2022-04-29T20:51:32.000-05:00"</span>,
+                      <span class="hljs-string">"max_temp"</span>: <span class="hljs-number">61.54</span>,
+                      <span class="hljs-string">"min_temp"</span>: <span class="hljs-number">51.82</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"scattered clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"03d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"date"</span>: <span class="hljs-string">"2022-04-30"</span>,
+                      <span class="hljs-string">"sunrise"</span>: <span class="hljs-string">"2022-04-30T07:01:31.000-05:00"</span>,
+                      <span class="hljs-string">"sunset"</span>: <span class="hljs-string">"2022-04-30T20:52:33.000-05:00"</span>,
+                      <span class="hljs-string">"max_temp"</span>: <span class="hljs-number">66.78</span>,
+                      <span class="hljs-string">"min_temp"</span>: <span class="hljs-number">47.16</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"clear sky"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"01d"</span>
+                  }
+              ]
+          ],
+          <span class="hljs-string">"hourly_weather"</span>: [
+              [
+                  {
+                      <span class="hljs-string">"time"</span>: <span class="hljs-string">"14:00:00"</span>,
+                      <span class="hljs-string">"temperature"</span>: <span class="hljs-number">70.41</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"time"</span>: <span class="hljs-string">"15:00:00"</span>,
+                      <span class="hljs-string">"temperature"</span>: <span class="hljs-number">70.84</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"time"</span>: <span class="hljs-string">"16:00:00"</span>,
+                      <span class="hljs-string">"temperature"</span>: <span class="hljs-number">71.24</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"time"</span>: <span class="hljs-string">"17:00:00"</span>,
+                      <span class="hljs-string">"temperature"</span>: <span class="hljs-number">71.49</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"time"</span>: <span class="hljs-string">"18:00:00"</span>,
+                      <span class="hljs-string">"temperature"</span>: <span class="hljs-number">71.46</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"time"</span>: <span class="hljs-string">"19:00:00"</span>,
+                      <span class="hljs-string">"temperature"</span>: <span class="hljs-number">72.27</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"time"</span>: <span class="hljs-string">"20:00:00"</span>,
+                      <span class="hljs-string">"temperature"</span>: <span class="hljs-number">70.29</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04d"</span>
+                  },
+                  {
+                      <span class="hljs-string">"time"</span>: <span class="hljs-string">"21:00:00"</span>,
+                      <span class="hljs-string">"temperature"</span>: <span class="hljs-number">67.3</span>,
+                      <span class="hljs-string">"conditions"</span>: <span class="hljs-string">"overcast clouds"</span>,
+                      <span class="hljs-string">"icon"</span>: <span class="hljs-string">"04n"</span>
+                  }
+              ]
+          ]
+      }
+    }
+  }
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Munchies</strong>: </p>
+    <ul>
+      <li>
+        <code>GET api/v1/munchies?start=&lt;starting_city&gt;&amp;destination=&lt;destination_city&gt;,co&amp;food=&lt;food_style_or_restaurant_type&gt;</code>
+      </li>
+      <li>Example Response
+        <pre><code>  GET api/v1/munchies?<span class="hljs-keyword">start</span>=denver,co&amp;destination=fort collins,co&amp;food=tacos
+  {
+    <span class="hljs-string">"data"</span>: {
+        <span class="hljs-string">"id"</span>: <span class="hljs-string">"null"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"munchies"</span>,
+        <span class="hljs-string">"attributes"</span>: {
+            <span class="hljs-string">"destination_city"</span>: <span class="hljs-string">"fort collins,co"</span>,
+            <span class="hljs-string">"travel_time"</span>: <span class="hljs-string">"01:03:57"</span>,
+            <span class="hljs-string">"forecast"</span>: {
+                <span class="hljs-string">"summary"</span>: <span class="hljs-string">"clear sky"</span>,
+                <span class="hljs-string">"temperature"</span>: <span class="hljs-number">71.8</span>
+            },
+            <span class="hljs-string">"restaurant"</span>: {
+                <span class="hljs-string">"name"</span>: <span class="hljs-string">"Uno Mas Taqueria"</span>,
+                <span class="hljs-string">"address"</span>: <span class="hljs-string">"120 W Olive Fort Collins, CO 80524"</span>
+            }
+        }
+    }
+  }
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Background Image for City</strong>: </p>
+    <ul>
+      <li><code>GET /api/v1/backgrounds?location=&lt;input_location_here&gt;</code></li>
+      <li>
+        <p>Example Response</p>
+        <pre><code>  <span class="hljs-meta">GET</span> /api/<span class="hljs-built_in">v1</span>/<span class="hljs-keyword">backgrounds?location=denver,co
+</span>
+  {
+    <span class="hljs-string">"data"</span>: {
+        <span class="hljs-string">"id"</span>: <span class="hljs-string">"null"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"photo"</span>,
+        <span class="hljs-string">"attributes"</span>: {
+            <span class="hljs-string">"source"</span>: <span class="hljs-string">"unsplash.com"</span>,
+            <span class="hljs-string">"image_url"</span>: <span class="hljs-string">"https://images.unsplash.com/photo-1511286148006-ec48824e3282?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwzMjIzODZ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjbyUyMGJyb2tlbiUyMGNsb3Vkc3xlbnwwfHx8fDE2NTEwMDI0ODU&amp;ixlib=rb-1.2.1&amp;q=85"</span>,
+            <span class="hljs-string">"photographer"</span>: <span class="hljs-string">"Miranda Joondeph"</span>,
+            <span class="hljs-string">"photographer_profile"</span>: <span class="hljs-string">"https://unsplash.com/@mirandafayj?utm_source=Sweater_Weather&amp;utm_medium=referral"</span>
+        }
+      }
+  }
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>User Registration</strong>: </p>
+    <ul>
+      <li><code>POST /api/v1/users</code></li>
+      <li>Returns a 201 if User successfully created. Will return a 400 if password does not match confirmation or if
+        user email has been taken</li>
+      <li>
+        <p>Example Request</p>
+        <pre><code>  POST /api/v1/users
+  Content-<span class="hljs-keyword">Type</span>: application/json
+  <span class="hljs-keyword">Accept</span>: application/json
+  Request <span class="hljs-keyword">Body</span>: 
+     {
+      <span class="hljs-string">"email"</span>: <span class="hljs-string">"HireStevenJames@gmail.com"</span>,
+      <span class="hljs-string">"password"</span>: <span class="hljs-string">"Email_Me_For_My_Resume"</span>,
+      <span class="hljs-string">"password_confirmation"</span>: <span class="hljs-string">"Email_Me_For_My_Resume"</span>
+     }
+</code></pre>
+      </li>
+      <li>
+        <p>Example Successful Response</p>
+        <pre><code>  {
+    <span class="hljs-attr">"data"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"12"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"user"</span>,
+        <span class="hljs-attr">"attributes"</span>: {
+            <span class="hljs-attr">"email"</span>: <span class="hljs-string">"HireStevenJames@gmail.com"</span>,
+            <span class="hljs-attr">"api_key"</span>: <span class="hljs-string">"6d76a22a274ae6ea30c7b60a11a2c15c"</span>
+        }
+    }
+  }
+</code></pre>
+      </li>
+      <li>
+        <p>Example Errors</p>
+        <pre><code>  {
+    <span class="hljs-attr">"error"</span>: {
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"email has already been taken"</span>
+    }
+  }
+  {
+    <span class="hljs-attr">"error"</span>: {
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"passwords do not match"</span>
+    }
+  }
+  {
+    <span class="hljs-attr">"error"</span>: {
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"missing request body"</span>
+    }
+  }
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>User Log-In Session</strong>: </p>
+    <ul>
+      <li><code>POST /api/v1/sessions</code></li>
+      <li>Returns a 200 if User successfully logs in. Will return a 401 if invalid credentials</li>
+      <li>
+        <p>Example Request</p>
+        <pre><code>  POST /api/v1/sessions
+  Content-<span class="hljs-keyword">Type</span>: application/json
+  <span class="hljs-keyword">Accept</span>: application/json
+  Request <span class="hljs-keyword">Body</span>: 
+     {
+      <span class="hljs-string">"email"</span>: <span class="hljs-string">"HireStevenJames@gmail.com"</span>,
+      <span class="hljs-string">"password"</span>: <span class="hljs-string">"Email_Me_For_My_Resume"</span>
+     }
+</code></pre>
+      </li>
+      <li>
+        <p>Example Successful Response</p>
+        <pre><code>  {
+    <span class="hljs-attr">"data"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"12"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"user"</span>,
+        <span class="hljs-attr">"attributes"</span>: {
+            <span class="hljs-attr">"email"</span>: <span class="hljs-string">"HireStevenJames@gmail.com"</span>,
+            <span class="hljs-attr">"api_key"</span>: <span class="hljs-string">"6d76a22a274ae6ea30c7b60a11a2c15c"</span>
+        }
+    }
+  }
+</code></pre>
+      </li>
+      <li>
+        <p>Example Errors</p>
+        <pre><code>  {
+    <span class="hljs-attr">"error"</span>: {
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"invalid credentials"</span>
+    }
+  }
+  {
+    <span class="hljs-attr">"error"</span>: {
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"missing request body"</span>
+    }
+  }
+</code></pre>
+        <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+      </li>
+    </ul>
+  </li>
+</ul>
+<h3 id="consumed-">Consumed:</h3>
+<pre><code><span class="hljs-bullet">- </span>OpenWeather
+  - [<span class="hljs-string">One Call API 1.0</span>](<span class="hljs-link">https://openweathermap.org/api/one-call-api</span>)
+<span class="hljs-code">    - `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&amp;lon={lon}&amp;exclude={part}&amp;appid={API key}`</span>
+<span class="hljs-code">    - Used for weather forecast data. We are utilizing Current, Hourly, and Daily data.</span>
+<span class="hljs-bullet">- </span>MapQuest
+  - [<span class="hljs-string">Directions API - Route</span>](<span class="hljs-link">https://developer.mapquest.com/documentation/directions-api/route/get</span>)
+<span class="hljs-code">    - `http://www.mapquestapi.com/directions/v2/route?key=KEY&amp;from=Clarendon Blvd,Arlington,VA&amp;to=2400+S+Glebe+Rd,+Arlington,+VA`</span>
+<span class="hljs-code">    - Used for getting drive time to determine ETA for destination</span>
+  - [<span class="hljs-string">Geocoding API - Address</span>](<span class="hljs-link">https://developer.mapquest.com/documentation/geocoding-api/address/get</span>)
+<span class="hljs-code">    - `http://www.mapquestapi.com/geocoding/v1/address?key=KEY&amp;location=Washington,DC`</span>
+<span class="hljs-code">    - Used for retrieving latitude and longitude coordinates for destination, which is then passed into the OpenWeather API</span>
+<span class="hljs-bullet">- </span>Unsplash
+  - [<span class="hljs-string">Search Photos</span>](<span class="hljs-link">https://unsplash.com/documentation#search-photos</span>)
+<span class="hljs-code">    - `https://api.unsplash.com/search/photos?page=1&amp;query=cloudy`</span>
+<span class="hljs-code">    - Used to retrieve a photo to display on landing page. We are using the destination and weather conditions as a search query to return photos relevant to our users experience.</span>
+<span class="hljs-bullet">- </span>Yelp Fusion 
+  - [<span class="hljs-string">Business Search</span>](<span class="hljs-link">https://www.yelp.com/developers/documentation/v3/business_search</span>)
+<span class="hljs-code">    - `https://api.yelp.com/v3/businesses/search?term=tacos&amp;location=denver,co`</span>
+<span class="hljs-code">    - Used to search for restaurants at destination city that will be open at time of arrival that matches food/restaurant type selected in request</span>
+</code></pre>
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<h2 id="built-with-">Built With:</h2>
+<ul>
+  <li>Framework: Ruby on Rails<ul>
+      <li>Versions<ul>
+          <li>Ruby: 2.7.4</li>
+          <li>Rails: 5.2.6</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Database: PostgreSQL</li>
+  <li>Other tech used: <ul>
+      <li>Postman</li>
+      <li>RSpec </li>
+    </ul>
+  </li>
+</ul>
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<h2 id="testing-">Testing:</h2>
+<ul>
+  <li>This application is fully tested through RSpec. </li>
+  <li>You can run RSpec on any directory/file using <code>bundle exec rspec &lt;directory/file&gt;</code></li>
+  <li>SimpleCov is included to ensure tests have full coverage.</li>
+  <li>To run the Simplecov report type the following into your terminal: <code>open coverage/index.html</code></li>
+  <li>
+    <p>See details here: <a href="https://github.com/simplecov-ruby/simplecov">SimpleCov</a></p>
+    <h3 id="rspec-test-results">RSpec Test Results</h3>
+    <p><img src="https://user-images.githubusercontent.com/91357724/165412598-f4ff2cd3-6f96-4ea0-9723-f9644e0e715c.png"
+        alt="Test Results"></p>
+  </li>
+</ul>
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<h2 id="future-additions-">Future Additions:</h2>
+<ul>
+  <li>I completed this project over the course of 4 days and was able to implement all of the requirements for the
+    project, however I have identified a couple addditions that would be great additions. <ol>
+      <li>
+        Caching - Each endpoint is using multiple service calls to external APIs. In some cases, there are actually
+        multiple calls to the same API (weather forecasts). Caching would be a huge boost to performance for the
+        application and would reduce required external API calls as well.
+      </li>
+      <li>
+        Events in destination city - Yelp has an API endpoint that would allow me to get events in a location. There is
+        not a limiting parameter for specific dates or times, but that would be easy enough to parse within a Facade.
+      </li>
+      <li>
+        Places of Interest - I think it would be fun to display interesting/historic destinations that are along the
+        travel route. I could even implement some logic that only displayed outdoor destinations if the weather was
+        warmer than a certain threshold.
+      </li>
+    </ol>
+
+  </li>
+</ul>
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<h2 id="contributors">Contributors</h2>
+<ul>
+  <li><a href="https://github.com/stevenjames-turing">Steven James</a>
+    <p align="right">(<a href="#top">back to top</a>)</p>
+  </li>
+</ul>
